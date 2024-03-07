@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <!-- fontawesome -->
+     <script src="https://kit.fontawesome.com/37a0095394.js" crossorigin="anonymous"></script>
+     <!-- daisy ui and tailwind -->
+ <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+ <script src="https://cdn.tailwindcss.com"></script>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- custom styles -->
+     
+     <style>
+        * {box-sizing: border-box;}
+        body {font-family: Verdana, sans-serif;}
+        .mySlides {display: none;}
+        img {vertical-align: middle;}
+        
+        /* Slideshow container */
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+        
+        /* Caption text */
+        .text {
+          color: #f2f2f2;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+        }
+        
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        
+        /* The dots/bullets/indicators */
+        .dot {
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+        
+        .active {
+          background-color: #717171;
+        }
+        
+        /* Fading animation */
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+          .text {font-size: 11px}
+        }
+        </style>
+     
+     <!--  -->
+     <title>SM ISRAQ'S LIBRARY</title>
+ </head>
+ <body class="bg-slate-100">
+
+ 
+     <div class="navbar bg-slate-400 fixed z-50">
+         <div class="navbar-start">
+           <div class="dropdown">
+             <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+             </div>
+             <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+               <li><a href="https://smdaiyan.github.io/mylibrary/">Homepage</a></li>
+               <li><a href="mailto:durnibarpathshala@gmail.com" target="_blank">Email</a></li>
+             </ul>
+           </div>
+         </div>
+         <div class="navbar-center">
+           <a href="https://smdaiyan.github.io/mylibrary/" class="btn btn-ghost text-xl font-extrabold"><img src="../images/logo.png" class="h-12 w-12">Israq's Library</a>
+         </div>
+         <div class="navbar-end">
+           <button class="btn btn-ghost btn-circle">
+             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+           </button>
+           <button class="btn btn-ghost btn-circle">
+             <div class="indicator">
+               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
+               <span class="badge badge-xs badge-primary indicator-item"></span>
+             </div>
+           </button>
+         </div>
+       </div>
+    
+    <!-- slider starts -->
+
+    <div class="slideshow-container relative top-16 mb-16" >
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../images/cr-1.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../images/cr-2.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../images/cr-3.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../images/cr-4.jpg" style="width:100%">
+          <div class="text" style="color: rgb(0, 0, 0);  font-size: 30px;"></div>
+        </div>
+
+        
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+
+        </div>
+        
+        <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2500); // Change image every 2 seconds
+        }
+        </script>
+ <!--  book list -->
+
+  <section class="grid grid-cols-2 lg:grid-cols-4 gap-2 p-2 bg-slate-200">
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">আবার তোরা কিপটে হ</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1MHVqlKGiPjiCtOJ4lc3hVAxnHk2R3VLD/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">আলো অন্ধকারে যায়</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1Vc_KBV7hPXZKRY-spxzj_d0FGlpkYgxU/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">আলো হাতে চলিয়াছে আধারের যাত্রী</h3>
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1Xfnzt6uMQny02uDuVHgGrZYmhq2C0yMk/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+      <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+      <div class="mt-2 shadow-lg">
+          <div><marquee scrolldelay="150">
+            <h3 class="text-xl font-bold">আমার একটা দুঃখ আছে</h3> 
+          </marquee></div>
+      </div> 
+   
+      <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+        <a href="https://drive.google.com/file/d/1mCuIv9SzYKTXrKUDroG3TVLZsYAA87qs/view?usp=drive_link">Download</a>
+      </div>
+  </div>
+  <!--  -->
+  <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+      <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+      <div class="mt-2 shadow-lg">
+          <div><marquee scrolldelay="150">
+            <h3 class="text-xl font-bold">অশ্বডিম্ব</h3>
+          </marquee></div>
+      </div> 
+   
+      <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+        <a href="https://drive.google.com/file/d/19F1wHWscGJGKdOuoo0kJCXmJgkV2teFb/view?usp=drive_link">Download</a>
+      </div>
+  </div>
+  <!--  -->
+  <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+      <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+      <div class="mt-2 shadow-lg">
+          <div><marquee scrolldelay="150">
+            <h3 class="text-xl font-bold">ভালোবাসা মন্দবাসা</h3>
+          </marquee></div>
+      </div> 
+   
+      <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+        <a href="https://drive.google.com/file/d/1AkCt8MDvr2hAF6In4jJW2kAhqNb6ksnS/view?usp=drive_link">Download</a>
+      </div>
+  </div>
+  <!--  -->
+  <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+      <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+      <div class="mt-2 shadow-lg">
+          <div><marquee scrolldelay="150">
+            <h3 class="text-xl font-bold">ভালোবাসি আশ্চর্যের মেঘদল</h3>
+          </marquee></div>
+      </div> 
+   
+      <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+        <a href="https://drive.google.com/file/d/1IYy0fBBXjhv07E8_uvuy1DvfYaU20Fp0/view?usp=drive_link">Download</a>
+      </div>
+  </div>
+  <!--  -->
+  <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+      <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+      <div class="mt-2 shadow-lg">
+          <div><marquee scrolldelay="150">
+            <h3 class="text-xl font-bold">এতদিন কোথায় ছিলেন</h3>
+          </marquee></div>
+      </div> 
+   
+      <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+        <a href="https://drive.google.com/file/d/1kwFtRKef9shHzUwwxqgq8zBQr_xeHGEO/view?usp=drive_link">Download</a>
+      </div>
+  </div>
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">ফাজি</h3>
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1akdWdD7ZhkzVjWZAfRDw2wzSbH5u2rBx/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">ফিরে এসো সুন্দরীতমা</h3>
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/13_SAb-oXGi1vqaJftMur0tRKpy37rcYL/view?usp=drive_link">Download</a>
+        </div> 
+    </div>
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">গ্রিস দেশের রূপকথা</h3>
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/12KNmqZPHVIY5O2y05i4vj4ZZAuk8i7z8/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">হৃদিতা</h3>
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/190JMmyPJzkfIgyBNUNzNfanYmA08jOxG/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">খেয়া</h3>
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1WYga-PDuFSuABlocAwZ8-k15KPKfj3JN/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">মা</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1xPb1ckQ9V3yCIc1e7TZe5GipE2o6D8c6/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">মন প্লাস হৃদয়</h3>
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1BJlu-L0xJ2dt10T_HFFgn8Yscbin1WB4/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">নন্দিনী</h3>
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1U0GBVbDiW5HZupy6yme0D2dq-gSGXMtk/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">অন্ধকারের একশ বছর</h3>
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1EbT2e0_oDvzdnZ43ZAl92Tb4E-e5hKZl/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">অসম্পূর্ণ চুম্বনের ১৯ বছর পর</h3>
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1UDw04CE2aqOh49u7ehT4O1vE13imryz9/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">পরশী যদি আমায় ছোতো</h3>
+            </marquee></div>
+        </div> 
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1BZuTmIjWC-1sfgLjt2aiDLEbmAZp_jaH/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+ 
+
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">সেজুতি তোমার জন্য </h3>
+            </marquee></div>
+        </div> 
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1_Hkh1upjtuurXYMjj31JyzTzTuLGagwX/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+ 
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">স্বপ্ন</h3>
+            </marquee></div>
+        </div> 
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1AsOub6wx2I4m23rXGdEd4_OROn6iCN0q/view?usp=drive_link">Download</a>
+        </div> 
+    </div>
+ 
+   
+    
+  
+  </section>
+
+ 
+ <!-- footer -->
+
+ <footer class="footer footer-center p-10 bg-slate-500 text-black">
+    <aside>
+      <img src="../images/logo.png" alt="logo" height="150" width="150">
+      <p class="font-bold text-3xl">
+        Israq's Library
+      </p> 
+      <p class="text-sm font-semibold max-w-md">Hi, I am SM Ragib Israq Daiyan. <br> The objective of this website is to make the books easily accessible to my beloved people.  When it comes to entertainment, <br>reading book is the best. </p>
+      <p class="mt-2">Copyright © 2024 - All right reserved</p>
+    </aside> 
+    <nav>
+      <div class="grid grid-flow-col gap-4 text-3xl">
+        <a href="https://www.facebook.com/shah.daiyan" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@durnibarpathshala" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://wa.me/+8801612073102" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </nav>
+  </footer>
+</body>
+</html>
