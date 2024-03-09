@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <!-- fontawesome -->
+     <script src="https://kit.fontawesome.com/37a0095394.js" crossorigin="anonymous"></script>
+     <!-- daisy ui and tailwind -->
+ <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+ <script src="https://cdn.tailwindcss.com"></script>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- custom styles -->
+     
+     <style>
+        * {box-sizing: border-box;}
+        body {font-family: Verdana, sans-serif;}
+        .mySlides {display: none;}
+        img {vertical-align: middle;}
+        
+        /* Slideshow container */
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+        
+        /* Caption text */
+        .text {
+          color: #f2f2f2;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+        }
+        
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        
+        /* The dots/bullets/indicators */
+        .dot {
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+        
+        .active {
+          background-color: #717171;
+        }
+        
+        /* Fading animation */
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+          .text {font-size: 11px}
+        }
+        </style>
+     
+     <!--  -->
+     <title>SM ISRAQ'S LIBRARY</title>
+ </head>
+ <body class="bg-slate-100">
+
+ 
+     <div class="navbar bg-slate-400 fixed z-50">
+         <div class="navbar-start">
+           <div class="dropdown">
+             <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+             </div>
+             <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+               <li><a href="https://smdaiyan.github.io/mylibrary/">Homepage</a></li>
+               <li><a href="mailto:durnibarpathshala@gmail.com" target="_blank">Email</a></li>
+             </ul>
+           </div>
+         </div>
+         <div class="navbar-center">
+           <a href="https://smdaiyan.github.io/mylibrary/" class="btn btn-ghost text-xl font-extrabold"><img src="../images/logo.png" class="h-12 w-12">Israq's Library</a>
+         </div>
+         <div class="navbar-end">
+           <button class="btn btn-ghost btn-circle">
+             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+           </button>
+           <button class="btn btn-ghost btn-circle">
+             <div class="indicator">
+               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
+               <span class="badge badge-xs badge-primary indicator-item"></span>
+             </div>
+           </button>
+         </div>
+       </div>
+    
+    <!-- slider starts -->
+
+    <div class="slideshow-container relative top-16 mb-16" >
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../images/cr-1.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../images/cr-2.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../images/cr-3.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../images/cr-4.jpg" style="width:100%">
+          <div class="text" style="color: rgb(0, 0, 0);  font-size: 30px;"></div>
+        </div>
+
+        
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+
+        </div>
+        
+        <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2500); // Change image every 2 seconds
+        }
+        </script>
+ <!--  book list -->
+
+  <section class="grid grid-cols-2 lg:grid-cols-4 gap-2 p-2 bg-slate-200">
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 1-1</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/uc?export=download&id=1Hs-9A4k1KUaqueWjDffWH9xoxYQUesGe">Download</a>
+        </div>
+    </div>
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 1-2</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/uc?export=download&id=1V2vpLiXOrXS8KbGocZWqpCrlbi4ignJw">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 2-1</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1eTEn-Dag9VzAQ1ToNo3SWASNfiuP8lbE/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+   
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 2-2</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1zg0_x4BDSUqaJDzGeIFPNbR-RAzjfMF9/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 3-1</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/uc?export=download&id=1HSV2MrpYoMS4E7Y8q9uHJ-aTVbveYnz_">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 3-2</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/uc?export=download&id=1XGO0IBUzdPPDqJPtkID_qC0VBsGxAe92">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 4-1</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/uc?export=download&id=1tkSft-KRwbT5QGtbIXffLbZv6cMLlkZ1">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 4-2</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/uc?export=download&id=15ZXR1EtKKaKff5Hehctzkg0pVHKt5iAi">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 5-1</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/uc?export=download&id=1bLKleD4EG1_tqp6_kmxMRol_DCTNaU7H">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 6</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/uc?export=download&id=14YGFRphtwg4HfMITGQHhPy-BlPY_6vvL">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 7</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/uc?export=download&id=1ZEiaoZrSyKaPb8WKtbpzRWcGMAZ7qGJF">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 8</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/uc?export=download&id=15uhlG6IGEPz6ak4wIyvsABpiSr8BVOUS">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 9</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/uc?export=download&id=1fu5UJVjROYX6II16FZMRO7IYRvCljUsS">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 10</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1PTINhDiczIqEQwHYKSIISLjxbQQ_4XR6/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 11</h3>  
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/uc?export=download&id=1oQxx9KQ52J5M3cwYrrJSKA4dY5YP-l_p">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 12</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/uc?export=download&id=1oQxx9KQ52J5M3cwYrrJSKA4dY5YP-l_p">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 13</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/uc?export=download&id=1EJgYU2lD3Zcuf3h_VOGrReeK0rA8Jtg_">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 14</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/uc?export=download&id=1WSGoYTJs1PvTdVDrRAYdrQ-ov6rnHYE5">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 15</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1lMPgdTjRvTptiN_AMN2-hD_I2pLTwLfH/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 16</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/uc?export=download&id=1aVgp2B1CCIj5sucthMu9az-SMBSu8lNk">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 17</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/uc?export=download&id=1l03thk4wq1ENtSyn1j8X3jZOQ3N3XS00">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 18</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1QonS4GX9lHZiRDNiiJHk4criuYHnYgcv/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 19</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/17UWgOuRicK8zXIPQP1CLYdLZpqYVy2RI/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 20</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1bpvnWOh_MNlzpY3G-K-rcPQozQuqcN9n/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 21</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/uc?export=download&id=1tiZ7cKkmvoSwhcSWorWspInAiEoLnJQw">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 22</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1u3Z73XGM3jkyoG2zHG46v5mKGoKKVe2O/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 23</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1e4NFzD9sPYNHyVmJN_QeqgspFayg6nme/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 24</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/19v1Nc81G7rnC5eSIt_7zT0ukT-v-c6Cg/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 25</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1eIKiAfBe0iFlicWZGIzijL2H-E1FYf44/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 26</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1YaFQ3MCYeJlb918s4T3r2lnYoUy1V-NS/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 27</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1wOc0jTdR0nDHePWSknkK093t6FZJsn-n/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 28</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1wh0qCwaNU0IrcvzspwK4RZnNMt0dAvhB/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 29</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/19gPOrw8_lBzJfHAWWRiwRr4gL-9vjaRc/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+    <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 30</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/15iiUCSMlgPuFUplLg40WkZARDE1rxkJK/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 31</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1D8uhyuz-6pHYdcnbfiycEfY8DA3FPU_0/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 32</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1YCDq5eLVrfHpNBOl12iJFgynij0o3Ssd/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 33</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1huP39W_y9Jo05HeTdkERzB9kXbcgBG3h/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 34</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1Szu3AUanPtpw0sDSBRTJhomA8moIH9Oj/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 35</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1BH035wzpBU3u4qOWSX-yxAW8SMxknQ0l/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 36</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1vW-ugMY3zNbFHT2tn_qcKjSSKVOiTapw/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 37</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1SLWhMmcYCSKcvNHWZ58yEaTOjRziFgqR/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 38</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1tCf7on43x62-gsUY8L2k4Uau5TZRM-r9/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 39</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1ugKqJY0bc5wa5jIkjMQn64tH1Vqjmcgg/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 40</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1gFR1CMP1LvfHBBrs-MKEDNOPl_yg8z5v/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 41</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1oGBPlg5oB4zVWVlrXF2_VKiLcwUOzNno/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 42</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1YiCHqFCDJh8qVx3-K4Wx9_dvE6fR1GT9/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 43</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1DdRsszyN55oX7hGcBB8oS3QeqPGoeNrR/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 44</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/18V_7GagbFVYDmFJN8PZsTFUlTGevEtmQ/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 45</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1jnlI-OSYcwSnBDaqSsjiUidZVARwMuhZ/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 46</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1cxLxRMiISBiCL-qramXN49vmrVVM6V6s/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 47</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1yEf5SwF3naK_fgeYv6i5Kmx-HEjKDKKi/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 48</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/16ABYdFmC37Jcd3hqhS25lgtut2oUTDL5/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 49</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1FSht3HSH3_ZBl2wbLx_UqnmxtZ3wnOc5/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 50</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1tEVecVqMG5atCmKmBAh7LtYQ92D_3ctZ/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 51</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/17CU7p_rLr8h6nkQviZY0mYB0vmrdBUOL/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 52</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1UWOESiImpevftFFs_qNC8iPSijA6S2gp/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 53</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1qhQIK4r6pk-G3l1TtYK7-td-haZP7T-3/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 54</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1hIlvAWmb8KHogR_m3Zex3XuT36ZhubYJ/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 55</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1BjVTEnwzg8nafqw9nKT-6_RIxhgQUJaq/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 56</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1OOYkrwR6HU4DcbhfdmWkDW752gyFGWSr/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 57</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/10heONsusFmAG_-7BFYbFcXsBijcQKHMQ/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 58</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1PkWAAgloO4ibCn49BGwRG2d-J9LdCv7h/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 59</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1LPtGntMEuO6cGWfIarT-aTRMlcQfaDKX/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 60</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1tEhY4U8Jm_d02bIm85EdSHJjDwXsMIAE/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 61</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1iGVNV9kkoNU_QHfBUzXq61OFJtwJxa6c/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 65</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1CFiO3jq2GF0xeMMJ29Bp6n_rh7UVeBI9/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 66</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1uc9Y1xtl447Davxl0GyjFur5rNPTUpR6/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 68</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1f5C7X5loDvAv11-wvtBz0hWGe_WkWTRt/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 85</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1uiGd_WGCnll9nlTjcSRfHea0-U00dgi5/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 93</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1FwmlCNFwYlMePJSMB9FZ4am6aCzS8pmM/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 103</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1uiGd_WGCnll9nlTjcSRfHea0-U00dgi5/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 106</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1dT38yXunenV2fOXBiHNc4yFv1Jw-83Z2/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 109</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1HSgg0fcY6wyenNAtJkSvkC-SLOe_L-Zm/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+    <!--  -->
+    <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+        <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+        <div class="mt-2 shadow-lg">
+            <div><marquee scrolldelay="150">
+              <h3 class="text-xl font-bold">তিন গোয়েন্দা Vol 114</h3> 
+            </marquee></div>
+        </div>
+     
+        <div class="btn bg-gray-700 text-slate-200 font-bold my-4">
+          <a href="https://drive.google.com/file/d/1XAiNqC6wndupf7zfCeQbNu6ccsNDmSgo/view?usp=drive_link">Download</a>
+        </div>
+    </div>
+    
+ <!--  -->
+   
+    
+  
+  </section>
+
+ 
+ <!-- footer -->
+
+ <footer class="footer footer-center p-10 bg-slate-500 text-black">
+    <aside>
+      <img src="../images/logo.png" alt="logo" height="150" width="150">
+      <p class="font-bold text-3xl">
+        Israq's Library
+      </p> 
+      <p class="text-sm font-semibold max-w-md">Hi, I am SM Ragib Israq Daiyan. <br> The objective of this website is to make the books easily accessible to my beloved people.  When it comes to entertainment, <br>reading book is the best. </p>
+      <p class="mt-2">Copyright © 2024 - All right reserved</p>
+    </aside> 
+    <nav>
+      <div class="grid grid-flow-col gap-4 text-3xl">
+        <a href="https://www.facebook.com/shah.daiyan" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@durnibarpathshala" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://wa.me/+8801612073102" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </nav>
+  </footer>
+</body>
+</html>
