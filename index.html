@@ -172,7 +172,7 @@
           }
           slides[slideIndex-1].style.display = "block";  
           dots[slideIndex-1].className += " active";
-          setTimeout(showSlides, 2500); // Change image every 2 seconds
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
         }
         </script>
 
@@ -208,6 +208,47 @@
         </div>
         </div>
       </section>
+
+
+      <!-- news portion -->
+
+  <section class="shadow-xl my-4">
+
+    <div><marquee><h3 class="text-xl">Read Latest News</h3></marquee></div>
+
+    <div class="carousel w-full">
+      <div id="slide1" class="carousel-item relative w-full">
+       <a href="https://www.bbc.com/bengali/"> <img src="./images/news-4.jpg" class="w-full" /></a>
+        <div class="absolute flex justify-between top-36 left-5 right-5 top-1/2">
+          <a href="#slide3" class="btn bg-transparent btn-circle">❮</a> 
+          <a href="#slide2" class="btn bg-transparent btn-circle">❯</a>
+        </div>
+      </div> 
+      <div id="slide2" class="carousel-item relative w-full">
+        <a href="https://www.thedailystar.net/"><img src="./images/news-3.jpg" class="w-full" /></a>
+        <div class="absolute flex justify-between top-36 left-5 right-5 top-1/2">
+          <a href="#slide1" class="btn bg-transparent btn-circle">❮</a> 
+          <a href="#slide3" class="btn bg-transparent btn-circle">❯</a>
+        </div>
+      </div> 
+      <div id="slide3" class="carousel-item relative w-full">
+        <a href="https://www.prothomalo.com/"><img src="./images/news-1.jpg" class="w-full" /></a>
+        <div class="absolute flex justify-between top-36 left-5 right-5 top-1/2">
+          <a href="#slide2" class="btn bg-transparent btn-circle">❮</a> 
+          <a href="#slide1" class="btn bg-transparent btn-circle">❯</a>
+        </div>
+      </div> 
+      <div id="slide3" class="carousel-item relative w-full">
+        <a href="https://www.jugantor.com/"><img src="./images/news-2.jpg" class="w-full" /></a>
+        <div class="absolute flex justify-between top-36 left-5 right-5 top-1/2">
+          <a href="#slide2" class="btn bg-transparent btn-circle">❮</a> 
+          <a href="#slide1" class="btn bg-transparent btn-circle">❯</a>
+        </div>
+      </div> 
+      
+    </div>
+  </section>
+
       <!-- footer -->
 
       <footer class="footer footer-center p-10 bg-slate-500 text-black">
