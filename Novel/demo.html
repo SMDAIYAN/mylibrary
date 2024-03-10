@@ -23,6 +23,25 @@
           position: relative;
           margin: auto;
         }
+      
+        /* countdown */
+        p {
+            text-align: center;
+            font-weight: bold;
+            font-size: 15px;
+            margin-top: 0px;
+            color: rgb(214, 170, 23);
+          }
+
+        #countdown {
+          background-image: url(../images/Ramadan-cover.jpg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 100%;
+          height: 9rem;
+
+        }
         
         /* Caption text */
         .text {
@@ -176,9 +195,56 @@
         }
         </script>
 
+      
+
+<!-- this is countdown section -->
+
+
+      <section class="bg-slate-800 flex justify-evenly" id="countdown">
+        <div class="relative right-8 top-10 text-xs font-semibold"><h2 class="text-yellow-500">Ramadan Mubarak</h2></div>
+        <div class="relative top-11 left-4">
+          <marquee scrolldelay="450" width="100"><h4 class="text-xs text-yellow-600 font-bold">রমজান আরম্ভ হতে বাকি</h4></marquee>
+          <p id="demo"></p>
+        </div>
+
+      </section>
+
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Mar 12, 2024 11:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+   
 
  <!--  book list -->
-
+ <div><marquee behavior="" direction=""><h3>Select your author</h3></marquee></div>
   <section class="grid grid-cols-2 lg:grid-cols-4 gap-2 p-2 bg-slate-200">
     <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
         <img src="../images/book-1.png" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
