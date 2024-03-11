@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/37a0095394.js" crossorigin="anonymous"></script>
+    <!-- daisy ui and tailwind -->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SM ISRAQ'S LIBRARY</title>
+</head>
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <!-- fontawesome -->
+     <script src="https://kit.fontawesome.com/37a0095394.js" crossorigin="anonymous"></script>
+     <!-- daisy ui and tailwind -->
+ <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+ <script src="https://cdn.tailwindcss.com"></script>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- custom styles -->
+     
+     <style>
+        * {box-sizing: border-box;}
+        body {font-family: Verdana, sans-serif;}
+        .mySlides {display: none;}
+        img {vertical-align: middle;}
+        
+        /* Slideshow container */
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+        
+        /* Caption text */
+        .text {
+          color: #f2f2f2;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+        }
+        
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        
+        /* The dots/bullets/indicators */
+        .dot {
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+        
+        .active {
+          background-color: #717171;
+        }
+        
+        /* Fading animation */
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+          .text {font-size: 11px}
+        }
+        </style>
+     
+     <!--  -->
+     <title>SM ISRAQ'S LIBRARY</title>
+ </head>
+ <body>
+
+ 
+  <div class="navbar bg-slate-400 fixed z-50">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a href="https://smdaiyan.github.io/mylibrary/">Homepage</a></li>
+            <li><a href="mailto:durnibarpathshala@gmail.com" target="_blank">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-center">
+        <a href="https://smdaiyan.github.io/mylibrary/" class="btn btn-ghost text-xl font-extrabold"><img src="../images/logo.png" class="h-12 w-12">Israq's Library</a>
+      </div>
+      <div class="navbar-end">
+       <label class="swap swap-rotate">
+
+         <!-- this hidden checkbox controls the state -->
+         <input type="checkbox" class="theme-controller" value="synthwave" />
+         
+         <!-- sun icon -->
+         <svg class="swap-on fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/></svg>
+         
+         <!-- moon icon -->
+         <svg class="swap-off fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg>
+         
+       </label>
+            
+      </div>
+    </div>
+      
+    <div class="relative top-16"><img src="../images/cover-1.gif" class="w-full"></div>
+
+    <!-- writers name -->
+
+    <section class="mt-16 bg-slate-200 ">
+      <div class="mt-16"><marquee><h2 class="font-semibold text-xl mt-1">Select your author</h2></marquee></div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 p-2">
+       <!-- Thibaut Meurisse -->
+            <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+                <img src="../images/mo-1.jpg" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+                <div class="mt-2 shadow-lg">
+                    <div><marquee scrolldelay="150"><h3 class="text-xl font-bold">Thibaut Meurisse</h3></marquee></div>
+                </div>
+                <div class="max-h-28 shadow-lg my-2">
+                    <marquee direction="up" height="90" scrolldelay="400"><h5 class="text-sm font-semibold">Thibaut Meurisse is a self improvement book writer. He wrote a lot of books regarding self improvement. </h5></marquee>
+                </div>
+                <div class="btn bg-gray-700 text-slate-200 font-bold">
+                    <a href="./Thibaut.html">Read Books</a>
+                </div>
+            </div>
+            <!-- Stephen covey -->
+            <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+                <img src="../images/mo-2.jpg" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+                <div class="mt-2 shadow-lg">
+                    <div><marquee scrolldelay="150"><h3 class="text-xl font-bold">Stephen Covey</h3></marquee></div>
+                </div>
+                <div class="max-h-28 shadow-lg my-2">
+                    <marquee direction="up" height="90" scrolldelay="400"><h5 class="text-sm font-semibold">Stephen Richards Covey (October 24, 1932 – July 16, 2012) was an American educator, author, businessman, and speaker. His most popular book is The 7 Habits of Highly Effective People. His other books include First Things First, Principle-Centered Leadership, The 7 Habits of Highly Effective Families, The 8th Habit, and The Leader In Me: How Schools and Parents Around the World Are Inspiring Greatness, One Child at a Time. In 1996, Time magazine named him one of the 25 most influential people. He was a professor at the Jon M. Huntsman School of Business at Utah State University (USU) at the time of his death.</h5></marquee>
+                </div>
+                <div class="btn bg-gray-700 text-slate-200 font-bold">
+                    <a href="./covey.html">Read Books</a>
+                </div>
+            </div>
+            <!-- James Clear  -->
+            <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+                <img src="../images/mo-3.jpg" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+                <div class="mt-2 shadow-lg">
+                    <div><marquee scrolldelay="150"><h3 class="text-xl font-bold">Hakeemul Ummat Maulana James Clear</h3></marquee></div>
+                </div>
+                <div class="max-h-28 shadow-lg my-2">
+                    <marquee direction="up" height="90" scrolldelay="400"><h5 class="text-sm font-semibold">James Clear (born 1986) is an American writer.[1] He is best known for his book Atomic Habits</h5></marquee>
+                </div>
+                <div class="btn bg-gray-700 text-slate-200 font-bold">
+                    <a href="./James.html">Read Books</a>
+                </div>
+            </div>
+            <!-- Napoleon Hill -->
+            <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+                <img src="../images/mo-4.jpg" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+                <div class="mt-2 shadow-lg">
+                    <div><marquee scrolldelay="150"><h3 class="text-xl font-bold">Napoleon Hill</h3></marquee></div>
+                </div>
+                <div class="max-h-28 shadow-lg my-2">
+                    <marquee direction="up" height="90" scrolldelay="400"><h5 class="text-sm font-semibold">
+                        Oliver Napoleon Hill (October 26, 1883 – November 8, 1970) was an American self-help author and conman. He is best known for his book Think and Grow Rich (1937), which is among the best-selling self-help books of all time. Hill's works insisted that fervid expectations are essential to improving one's life. Most of his books were promoted as expounding principles to achieve "success".</h5></marquee>
+                </div>
+                <div class="btn bg-gray-700 text-slate-200 font-bold">
+                    <a href="./napoleon.html">Read Books</a>
+                </div>
+            </div>
+            
+            <!-- Jen Sincero -->
+            <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+                <img src="../images/mo-5.jpg" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+                <div class="mt-2 shadow-lg">
+                    <div><marquee scrolldelay="150"><h3 class="text-xl font-bold">Dr. Zakir Naik</h3></marquee></div>
+                </div>
+                <div class="max-h-28 shadow-lg my-2">
+                    <marquee direction="up" height="80" scrolldelay="400"><h5 class="text-sm font-semibold">
+                        Jen Sincero was born and raised in Westchester, New York. The daughter of Italian-born Domenico Sincero, a doctor, and Susan Sincero, she attended Briarcliff High School and later Colorado College, where she graduated in 1987 with a BA in English. Sincero worked in the marketing department at CBS/Epic Records in the 1990s during which time she co-founded her first band, Crotch, Sincero moved to Albuquerque, New Mexico, in 1996, where she started the Jenny Clinkscales Band and later 60 Foot Queenie, a solo project.
+                     </marquee> 
+                </div>
+                <div class="btn bg-gray-700 text-slate-200 font-bold">
+                  <a href="./Jan.html">Read Books</a>
+              </div>
+            </div>
+            <!--  William Harry McRaven -->
+            <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+                <img src="../images/mo-6.jpg" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+                <div class="mt-2 shadow-lg">
+                    <div><marquee scrolldelay="150"><h3 class="text-xl font-bold"> William Harry McRaven</h3></marquee></div>
+                </div>
+                <div class="max-h-28 shadow-lg my-2">
+                    <marquee direction="up" height="80" scrolldelay="400"><h5 class="text-sm font-semibold">
+                        William Harry McRaven (born November 6, 1955) is a retired United States Navy four-star admiral who served as the ninth commander of the United States Special Operations Command (SOCOM) from August 8, 2011 to August 28, 2014. From 2015 to 2018, he was the chancellor of The University of Texas System.
+                     </marquee> 
+                </div>
+                <div class="btn bg-gray-700 text-slate-200 font-bold">
+                  <a href="./arefin.html">Read Books</a>
+              </div>
+            </div>
+
+            <!--Charles Duhigg -->
+
+            <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+                <img src="../images/mo-7.jpg" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+                <div class="mt-2 shadow-lg">
+                    <div><marquee scrolldelay="150"><h3 class="text-xl font-bold">Charles Duhigg</h3></marquee></div>
+                </div>
+                <div class="max-h-28 shadow-lg my-2">
+                    <marquee direction="up" height="80" scrolldelay="400"><h5 class="text-sm font-semibold"> Charles Duhigg (born 1974) is an American journalist and non-fiction author. He was a reporter for The New York Times, currently writes for The New Yorker Magazine and is the author of two books on habits and productivity, titled The Power of Habit: Why We Do What We Do in Life and Business and Smarter Faster Better. In 2013, Duhigg was the recipient of the Pulitzer Prize for Explanatory Reporting for a series of 10 articles on the business practices of Apple and other technology companies.
+                     </marquee> 
+                </div>
+                <div class="btn bg-gray-700 text-slate-200 font-bold">
+                  <a href="./arifazad.html">Read Books</a>
+              </div>
+            </div>
+            <!-- Mel Robbins -->
+
+            <div class="shadow-2xl rounded-xl text-center p-3 flex flex-col items-center bg-slate-400">
+                <img src="../images/mo-8.jpg" alt="dr. jahangir" height="230" width="230" class="rounded-lg">
+                <div class="mt-2 shadow-lg">
+                    <div><marquee scrolldelay="150">
+                      <h3 class="text-xl font-bold">Mel Robbins</h3>
+                    </marquee></div>
+                </div>
+                <div class="max-h-28 shadow-lg my-2">
+                    <marquee direction="up" height="80" scrolldelay="400"><h5 class="text-sm font-semibold"> 
+                        Melanie Robbins (née Schneeberger; born October 6, 1968) is an American podcast host, author, motivational speaker, and former lawyer. She is known for her TEDx talk, "How to Stop Screwing Yourself Over"; and her books, The 5 Second Rule and The High 5 Habit, as well as host of The Mel Robbins Podcast.
+                     </marquee> 
+                </div>
+                <div class="btn bg-gray-700 text-slate-200 font-bold">
+                  <a href="./ahmadullah.html">Read Books</a>
+              </div>
+            </div>
+
+           
+
+        </div>
+      </section>
+
+             <!-- footer -->
+
+           <footer class="footer footer-center p-10 bg-slate-500 text-black">
+            <aside>
+              <img src="../images/logo.png" alt="logo" height="150" width="150">
+              <p class="font-bold text-3xl">
+                Israq's Library
+              </p> 
+              <p class="text-sm font-semibold max-w-md">Hi, I am SM Ragib Israq Daiyan. <br> The objective of this website is to make the books easily accessible to my beloved people.  When it comes to entertainment, <br>reading book is the best. </p>
+              <p class="mt-2">Copyright © 2024 - All right reserved</p>
+            </aside> 
+            <nav>
+              <div class="grid grid-flow-col gap-4 text-3xl">
+                <a href="https://www.facebook.com/shah.daiyan" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/@durnibarpathshala" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://wa.me/+8801612073102" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+              </div>
+            </nav>
+          </footer>
+    </body>
+    </html>
