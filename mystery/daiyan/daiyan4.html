@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <!-- fontawesome -->
+     <script src="https://kit.fontawesome.com/37a0095394.js" crossorigin="anonymous"></script>
+     <!-- daisy ui and tailwind -->
+ <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+ <script src="https://cdn.tailwindcss.com"></script>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- custom styles -->
+     
+     <style>
+        * {box-sizing: border-box;}
+        body {font-family: Verdana, sans-serif;}
+        .mySlides {display: none;}
+        img {vertical-align: middle;}
+        
+        /* Slideshow container */
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+        
+        /* Caption text */
+        .text {
+          color: #f2f2f2;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+        }
+        
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        
+        /* The dots/bullets/indicators */
+        .dot {
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+        
+        .active {
+          background-color: #717171;
+        }
+        
+        /* Fading animation */
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+          .text {font-size: 11px}
+        }
+        </style>
+     
+     <!--  -->
+     <title>SM ISRAQ'S LIBRARY</title>
+ </head>
+ <body>
+
+ 
+  <div class="navbar bg-slate-400 fixed z-50">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a href="https://smdaiyan.github.io/mylibrary/">Homepage</a></li>
+            <li><a href="mailto:durnibarpathshala@gmail.com" target="_blank">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-center">
+        <a href="https://smdaiyan.github.io/mylibrary/" class="btn btn-ghost text-xl font-extrabold"><img src="../../images/logo.png" class="h-12 w-12">Israq's Library</a>
+      </div>
+      <div class="navbar-end">
+       <label class="swap swap-rotate">
+
+         <!-- this hidden checkbox controls the state -->
+         <input type="checkbox" class="theme-controller" value="synthwave" />
+         
+         <!-- sun icon -->
+         <svg class="swap-on fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/></svg>
+         
+         <!-- moon icon -->
+         <svg class="swap-off fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg>
+         
+       </label>
+            
+      </div>
+    </div>
+    
+    <!-- slider starts -->
+
+    <div class="slideshow-container relative top-16 mb-16" >
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../../images/cr-1.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../../images/cr-2.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../../images/cr-3.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../../images/cr-4.jpg" style="width:100%">
+          <div class="text" style="color: rgb(0, 0, 0);  font-size: 30px;"></div>
+        </div>
+
+        
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+
+        </div>
+        
+        <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2500); // Change image every 2 seconds
+        }
+        </script>
+ <!--  story -->
+<section class="mx-4">
+    <h1 class="text-xl text-slate-500 text-center">Note: চোখে আলো লাগলে উপরে ডান কোণায় চাঁদের আইকনে ক্লিক করে ব্যাকগ্রাউন্ড কালো করে নিন</h1>
+    <h1 class="my-4 text-2xl font-extrabold underline"> কে সে? পর্ব -৪ </h1>
+    <p class="text-xl font-bold">
+   
+আজকেও দুঃস্বপ্ন দেখেছে তারা তিনজনই। নিলয় এবং অর্নবের মনে না চাইতেই কেমন যেন ভয় কাজ করছে । নিয়মিত দুঃস্বপ্ন দেখার কারণ কি! আসলেই কি কোনো অস্বাভাবিক বিষয় আছে ?? সিফাতও আজ দুঃস্বপ্ন দেখেছে কিন্তু কি দেখেছে মনে করতে পারছে না… 
+ক্যান্টিনে গিয়ে নাস্তা করে ক্লাসে যায় সবাই। নিলয় এর মাথা ঝিম ঝিম করছে। গতকাল স্বপ্নে সে ভয় পেয়েছে কিন্তু স্বপ্নটা আর মনে করতে পারছে না। তার ক্লাসে মন বসছে না কিন্তু কিছুদিন পরই সাময়ীক পরীক্ষা। নিলয় অর্নব এবং সিফাতকে অসস্তির কথা বলে হোস্টেলে চলে আসে। 
+
+তাদের ঘরের যে দেয়ালের সাথে ফ্লোরে বিছানা করা তার বিপরীত পাশের দেয়ালে অনেক হাবিজাবি লিখা। এগুলো প্রথম দিনই দেখেছে নিলয়। তবে আজ কোনো কাজ না থাকায় দেয়ালের দিকে তাকাতেই লিখাগুলো বুঝার আকর্ষণ অনুভব করছে নিলয়। অনেক হিজিবিজি লিখা, একটা লিখার উপর আরেকটি লিখা। কোন ভাষার অক্ষর বুঝা যাচ্ছে না। সাংকেতিক অনেক চিহ্ন দেওয়া আছে। একটা বৃত্ত, বৃত্তটির পরিধিতে কিছুদুর পর পর একই দিকে তীর চিহ্ন দিয়ে একটি ফ্লো বুঝানো হয়েছে। এখানে লিখাগুলো ইংরেজিতে লিখা, “birth->growth->old->death” .
+অর্থাৎ, জন্ম  বৃদ্ধি  ->  বয়ষ্ক  -> মৃত্যু 
+এর নিচে অস্পষ্টভাবে লিখা, “ when the ultimate goal is death than why … ??”
+অর্থাৎ,   যখন সর্বশেষ লক্ষ্য মৃত্যু তাহলে কেন…?? 
+আরো অনেক লিখা আছে সংকেত আছে কিন্তু নিলয় বুঝতে পারছে না ।
+নিলয়ের অস্বস্তি আরো বেড়ে গেলো।  নিলয়ের ক্লান্ত লাগছে তাই সে ঘুমিয়ে গেল। 
+
+সিফাত এবং অর্নব ক্লাস শেষে বাসায় আসে। বিকেল হয়ে গিয়েছে, এসে দেখে নিলয় ঘুমুচ্ছে, নিলয়কে ডেকে তুলে অর্নব। নিলয় ঘুম ঘুম চোখে তাকায়। 
+“ কিরে এতক্ষন ঘুমাচ্ছিস! শরির ঠিক আছে তুর ? ”
+“ মাথাটা ভার ভার লাগছে। বেশি ঘুমিয়ে ফেলেছি মনে হয়। কি হয়েছে আজ কলেজে ? ”
+“ কলেজ পরশুদিন থেকে পূজোর জন্য বন্ধ থাকবে ১০ দিন । বাড়ি থেকে ঘুরে আসার সুযোগ পাওয়া গেল অবশেষে! ”
+“ হ্যা, ঠিক বলেছিস। কালকে কলেজের সবার সাথে দেখা করে ক্লাস শেষেই বাড়ির উদ্দ্যেশে রওয়ানা দিয়ে দিব, কি বলিস?”
+“ হ্যা, সেটাই ভালো হবে। ভালো হয়েছে আমাদের বাসা একই জেলায়। একসাথে যাওয়া যাবে।“
+“ ঠিক বলেছিস “
+
+সন্ধ্যায় কেউ একজন দরজায় টোকা দেয়। সিফাত উঠে গিয়ে দরজা খুলে দেখে রফিক স্যার। 
+“ আসসালামু আলাইকুম স্যার। আপনি আসবেন আমরা ভাবতেও পারিনি ”
+“ কেমন আছ সিফাত? “
+“ ভালো আছি স্যার। আপনি কেমন আছেন স্যার? “
+“ ভালো আছি। হোস্টেলে এসছিলাম। অনেকদিনের অভ্যেসতো তাই মাঝে মাঝে আসি। ভাবলাম তুমাদের সাথে দেখা করে যায়। “ 
+রফিক স্যার চারিদিকে সবকিছু খেয়াল করছেন। 
+ঘরে বসতে দেয়ার মতো কিছু নেই।  একটা কাঠের বক্স ছিলো নিলয় সেটা স্যারকে বসার জন্য এগিয়ে দেয়।  স্যার বসতে বসতে ঘরের দেয়ালের দিকে তাকান। 
+“ আমার কাছে মনে হয় এই দেয়ালের লিখাগুলোর  মাঝে লজিক্যাল কিছু লুকিয়ে আছে। হাতে কাজ টাজ না থাকলে খুঁজে বের করার চেষ্টা করতে পারো। “
+সিফাতের কাছে স্যারকে এখন আর বুদ্ধিমান মনে হচ্ছে না। উনি কিভাবে এক মানসিক রোগীর আজে বাজে লিখার মধ্যে লজিক থাকতে পারে বলে ভাবতে পারলেন! এরপরেও সিফাত বললো, 
+“ জ্বী স্যার, চেষ্টা করবো খুঁজে বের করতে “।
+
+নিলয় বলল, 
+“ স্যার এই ঘরে কি আপনার অস্বস্তি হচ্ছে? পাখা নেইতো তাই বললাম। “
+“ আরে না, অস্বস্তি হচ্ছে না। আমার এমন ঘরে থাকার অভ্যেস আছে। ছাত্রজীবনে কত ধরনের জায়গায় থাকতে হয়েছে তা বলে শেষ করতে পারবো না। ঘরের জানালা সবসময় খোলা রাখবে, বন্ধ করবে না। বাতাস  প্রবাহ করাটা জরুরী । আজ আমার একটা কাজ আছে তাই যেতে হবে, তুমরা বাসায় এসো। “
+“ আবার আসবেন স্যার! “
+
+নিলয় এবং সিফাতকে উদ্দেশ্য করে অর্নব বললো চল আজকে সন্ধ্যার পর একটু হাওয়া খেয়ে আসি, ফ্রেশ লাগবে ।
+তারা দুজনই সম্মতি জানালো। 
+ 
+বাইরে থেকে ঘুরে ক্লান্ত হয়ে তিনজন বাসায় ফিরে। সিফাত জানালার কাছে গিয়ে তাকায়। জানালার সামনে খোলা মাঠ, উচু কিছু গাছ, তিন তলা থেকে দেখতে খারাপ লাগে না। হঠাত সিফাত লক্ষ্য করলো জানালার নিচের দিকে লম্বা করে সানশেড আছে । উকি দিয়ে দেখলো সানশেড টি হোস্টেলের শেষ প্রান্ত পর্যন্ত চলে গিয়েছে। বেশ অনেকদিন হয়ে গেল তারা এই ঘরে থাকছে, এতদিনে ঘরের গুমোটভাব কমার কথা কিন্তু আরো বেড়েছে বলে মনে হচ্ছে সিফাতের। এর কারণ কি হতে পারে ভাবছে সিফাত। এমন হলেতো সহজেই অসুস্থ হয়ে পড়বে তারা। ঘরে থাকা অবস্থায় শ্বাস নিতে কষ্ট হয়, মনে হয় এই ঘরের বাতাসে কোনো ভারি গ্যাসের পরিমানের আধিক্য রয়েছে। কেমন যেন একটা ফার্মেসিতে থাকা গন্ধও পাওয়া যায় এই ঘরে। দেয়ালে লিখাগুলোর দিকে একবার তাকালো সিফাত, বাচ্চাদের হিজি বিজি লিখার মত কি সব, সাদা দেয়ালটাকে নষ্ট করে দিয়েছে। ডিম লাইটের সবুজ আলোয় 
+ নিলয় আর অর্নব ঘুমুচ্ছে, সিফাতও ঘুমানোর জন্য বিছানার দিকে এগিয়ে গেলো। 
+
+সকালে ঘুম থেকে উঠে সিফাত এবং অর্নব। নিলয় তখনও ঘুমুচ্ছে। অর্নব নিলয়কে ডাক দিলে সে আজ কলেজে যাবে না বলে, তার শরির ভালো লাগছে না। 
+অর্নব এবং সিফাত নাস্তা করতে ক্যান্টিনে যায় এবং নিলয়ের জন্য নাস্তা পাঠানোর ব্যবস্থা করে। 
+ক্যান্টিনের এক ১৪/১৫ বছরের ছেলে নিলয়ের নাস্তা নিয়ে আসে, 
+“ ভাই এই ঘরে আপনারা থাকেন কেমনে? আমারতো দম বাইর হইয়া যাইতাছে “
+“ নতুনতো তাই এমন লাগছে, ২ দিন থাকলেই ঠিক হয়ে যাবে “
+“ ভাই এই ঘরে নাকি যে থাকবে সেই মারা যাবে “
+“ হা, হা, হা… এগুলো সব গুজব। দেখছিস না আমরা প্রায় ১০/১২ দিন ধরে আছি, আমাদেরতো কিছুই হইনি “
+নাস্তা শেষে ছেলেটি চলে যায়। নিলয় উঠে দাঁড়ায় । তার শরীরে অলসতা কাজ করছে। মনে হচ্ছে আবার ঘুমিয়ে পরুক। সে টানা এত ঘুম শেষ এক বছরে
+ঘুমিয়েছে বলে তার মনে পড়ে না। সে দেয়ালের দিকে এগিয়ে গেলো। রফিক স্যারের কথা মনে পড়লো নিলয়ের, স্যার যখন বলেছে তাহলে এই লিখারগুলোর মধ্যে সত্যিই কিছু থাকতে পারে । দেখা যাক আসলেই কিছু বের করা যায় কি না। দড়জার দিকের দেয়ালের কাছে এসে দাঁড়ায় নিলয়, যেখানে রফিক স্যার বসেছিলেন ।  সেখানে অনেকগুলো চিকন মার্কার পেনের দাগের মাঝে একটা বর্গ দেখতে পায় সে, সেখানে মাঝ বরাবর একটা লিখা পড়ার চেষ্টা করে সে। লিখাটা ঝাপসা আর অনেক ছোট, সে লিখাটা আরো ভালোভাবে পড়তে দেয়ালের একদন কাছে তার চোখ নিয়ে যায়। তখন তার নাকে এক তীব্র গন্ধ অনুভূত হয়। দেয়ালের আস্তরন থেকে গন্ধটা আসছে বলে তার মনে হয়। তার মাথা ঝিম ঝিম করতে থাকে। সে চোখে ঝাপসা দেখতে শুরু করে। সে তখন শুধু দেয়ালের লিখাগুলো নিয়ে চিন্তা করতে পারছে । তখনি ঝাপসা চোখে দেয়ালের লিখাগুলো স্পষ্ট হয়ে উঠে,  “ go and run towards a running truck “ 
+অর্থাৎ, “ যাও এবং একটি চলন্ত ট্রাকের দিকে দৌড় দাও ”
+নিলয় ঘরে থেকে বেরিয়ে সিড়ি বেয়ে নিচে নেমে আসে। হোস্টেল থকে বেড়িয়ে হোস্টেল এর মেইন গেইট দিয়ে বেরিয়ে একটু সামনে ব্যাস্ত মহাসড়কের দিকে হাটতে থাকে। একটি চলন্ত বড় ট্রাককে আসতে দেখা যাচ্ছে, সেটির দিকে একদৃষ্টিতে তাকিয়ে থেকে ধীরে ধীরে রাস্তার দিকে এগুচ্ছে  নিলয়… … 
+
+    </p>
+
+</section>
+ 
+
+ 
+ <!-- footer -->
+
+ <footer class="footer footer-center p-10 bg-slate-500 text-black">
+    <aside>
+      <img src="../../images/logo.png" alt="logo" height="150" width="150">
+      <p class="font-bold text-3xl">
+        Israq's Library
+      </p> 
+      <p class="text-sm font-semibold max-w-md">Hi, I am SM Ragib Israq Daiyan. <br> The objective of this website is to make the books easily accessible to my beloved people.  When it comes to entertainment, <br>reading book is the best. </p>
+      <p class="mt-2">Copyright © 2024 - All right reserved</p>
+    </aside> 
+    <nav>
+      <div class="grid grid-flow-col gap-4 text-3xl">
+        <a href="https://www.facebook.com/shah.daiyan" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@durnibarpathshala" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://wa.me/+8801612073102" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </nav>
+  </footer>
+</body>
+</html>

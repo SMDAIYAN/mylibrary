@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <!-- fontawesome -->
+     <script src="https://kit.fontawesome.com/37a0095394.js" crossorigin="anonymous"></script>
+     <!-- daisy ui and tailwind -->
+ <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+ <script src="https://cdn.tailwindcss.com"></script>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- custom styles -->
+     
+     <style>
+        * {box-sizing: border-box;}
+        body {font-family: Verdana, sans-serif;}
+        .mySlides {display: none;}
+        img {vertical-align: middle;}
+        
+        /* Slideshow container */
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+        
+        /* Caption text */
+        .text {
+          color: #f2f2f2;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+        }
+        
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        
+        /* The dots/bullets/indicators */
+        .dot {
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+        
+        .active {
+          background-color: #717171;
+        }
+        
+        /* Fading animation */
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+          .text {font-size: 11px}
+        }
+        </style>
+     
+     <!--  -->
+     <title>SM ISRAQ'S LIBRARY</title>
+ </head>
+ <body>
+
+ 
+  <div class="navbar bg-slate-400 fixed z-50">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a href="https://smdaiyan.github.io/mylibrary/">Homepage</a></li>
+            <li><a href="mailto:durnibarpathshala@gmail.com" target="_blank">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-center">
+        <a href="https://smdaiyan.github.io/mylibrary/" class="btn btn-ghost text-xl font-extrabold"><img src="../../images/logo.png" class="h-12 w-12">Israq's Library</a>
+      </div>
+      <div class="navbar-end">
+       <label class="swap swap-rotate">
+
+         <!-- this hidden checkbox controls the state -->
+         <input type="checkbox" class="theme-controller" value="synthwave" />
+         
+         <!-- sun icon -->
+         <svg class="swap-on fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/></svg>
+         
+         <!-- moon icon -->
+         <svg class="swap-off fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg>
+         
+       </label>
+            
+      </div>
+    </div>
+    
+    <!-- slider starts -->
+
+    <div class="slideshow-container relative top-16 mb-16" >
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../../images/cr-1.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../../images/cr-2.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../../images/cr-3.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../../images/cr-4.jpg" style="width:100%">
+          <div class="text" style="color: rgb(0, 0, 0);  font-size: 30px;"></div>
+        </div>
+
+        
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+
+        </div>
+        
+        <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2500); // Change image every 2 seconds
+        }
+        </script>
+ <!--  story -->
+<section class="mx-4">
+    <h1 class="text-xl text-slate-500 text-center">Note: চোখে আলো লাগলে উপরে ডান কোণায় চাঁদের আইকনে ক্লিক করে ব্যাকগ্রাউন্ড কালো করে নিন</h1>
+    <h1 class="my-4 text-2xl font-extrabold underline"> কে সে? পর্ব - ৬  </h1>
+    <p class="text-xl font-bold">
+      
+      সিফাত এবং অর্নব প্রাথমিকভাবে ঘরের চারদিকে তাকিয়ে অস্বাভিবক কিছু পাওয়া যায় কি না খুজতে থাকে। দেয়ালের দাগগুলোর দিকে চোখ পরে সিফাতের। বাচ্চাদের হিজি-বিজি ছবি আঁকার মতো কতগুলো দাগ ছাড়া কিছুই নেই সেখানে। আরো আছে কিছু ত্রিভুজ, বৃত্ত। এগুলোর কোনো মানে থাকতে পারে না ভেবে ঘরের ছাদের দিকে চোখ ফেরায় সিফাত। মাকড়শার কিছু জাল ছাড়া সেখানে কিছুই নেই। অর্নব নিলয়ের বই-খাতা, ব্যাগ সবকিছু উলটে পালটে দেখছে, যদি কিছু পাওয়া যায়। কিন্তু অনেকক্ষন খুজার পরও কিছুই পাইনি নিলয়। 
+      সিফাত মেঝেতে তার দৃষ্টি ফেরায়। লক্ষ্য করতে থাকে কোনো জুতার ছাপ আছে কি না। সাধারণত ঘরের দরজার একটু ভেতর পর্যন্ত অনেক সময় অনেকে জুতা নিয়ে ঢুকে যায়। সিফাত দরজার একটু ভেতর দিকে ধুলোয় একটা আবছা জুতোর ছাপ লক্ষ্য করে। সিফাত পকেট থেকে স্মার্টফোন বের করে দ্রুত একটা ছবি তুলে নেই। অর্নব এগিয়ে আসে সিফাতের দিকে।
+      “কিছু পেয়েছিস নাকি?” 
+      “একটা জুতোর ছাপ পেয়েছি, এটা আমাদের কারো জুতোর ছাপ না।”
+      “ তাইতো, অপরিচিত লাগছে। কার হতে পারে? “
+      “ সেটাই বের করতে হবে এখন। “
+       লেপটপ খোলে দ্রুত ছবিটি ট্রান্সফার করে ফটোসপ প্রোগ্রামটিতে প্রবেশ করে সিফাত। ছবিটির কনট্রাস্ট বাড়িয়ে, ব্যকগ্রাউন্ড কালার এর এক্সপোজার কমিয়ে অব্জেক্ট অর্থাত পায়ের ছাপটি ফুটিয়ে তুলে সিফাত। তারপর পেনড্রাইভে ছবিটি ট্রান্সফার করে দ্রুত নিচে নেমে আসে সিফাত এবং অর্নব।
+      কাছেই একটা দোকান থেকে ছবিটি প্রিন্ট করে নেই সিফাত। তারপর আবার উপরে চলে আসে তারা । সিফাতের হাতে জুতোর ছাপের প্রিন্ট করা কাগজটি, তারা গোপনে হোস্টেলের প্রতিটি ঘরের সামনের জুতোগুলোর ছাপের সাথে মিলিয়ে দেখতে থাকে। একে একে সবগুলো জুতোর ছাপের সাথে মিলিয়ে দেখা হলে কোনো জুতোর সাথেই মিলে না এই ছাপ। তাঁদের মনে আরো সন্দেহ জন্মায়। 
+      ক্লান্ত হয়ে হোস্টেলের ক্যান্টিনে এসে বসে তারা।  তাঁদের দেখে হোস্টেল ম্যানেজার কবির দৌড়ে আসে। 
+      “ আপনাদের তিনজনকে একসাথে দেখতে আমার মন ভরে যেত ভাই, কি থেকে কি হয়ে গেল! এর পেছনে আপনাদের ঘরের কোনো সম্পর্ক নেই তো?? ”
+      “ এটা শুধোই একটি দূর্ঘটনা, আর কিছুই না ”
+      সিফাত খানিকটা বিরক্ত হয়েই উত্তর দিলো। 
+      “ জ্বি, আমিও তাই বিশ্বাস করি।“
+      “ দেখুনতো এই জুতোর ছাপটি আপনি চিনেন কি না ?”
+      “ মনে হচ্ছে চিনতে পেরেছি, এটাতো মনে হয় আমার ক্যান্টিনের এক কাজের ছেলের জুতোর ছাপ! কেন ভাই? কি হয়েছে?!”
+      “ তেমন কিছু না, ছেলেটি কোথায়? “
+      “ ছেলেটির বয়ষ ১৪/১৫ হবে, নাম মুন্না। ঘুমাচ্ছে হয়তো। ডাক দিচ্ছি এখনি। “
+      কবির গিয়ে মুন্না কে ডেকে নিয়ে আসে। ঘুম ঘুম চোখে মুন্না এগিয়ে আসে। মুন্নাকে দেখে সিফাত এবং অর্নবের সব আগ্রহ হাওয়ায় মিলিয়ে গেলো। এই পিচ্ছি ছেলের পক্ষে কিছু করা সম্ভব না। তবে যদি কেউ তাকে দিয়ে কিছু করি থাকে। বাজিয়ে দেখা যাক,
+      “ এই ছেলে, তুমি তিন তলার ৩০৭ নাম্বার ঘরে কে পাঠিয়েছে? কেন পাঠিয়েছে?? “
+      “ আমারেতো ম্যানেজার সাব পাঠাইছিলো গতকাল সকালে নাস্তা নিয়া যাওনের লাইজ্ঞা। “
+      “ কার নাস্তা নিয়ে গিয়েছিলে? “
+      “ আপনাগো মতো এক বেডা, ঘুমায় ছিলো। মনে হয়তাছিলো অসুস্থ। “
+       “ আর কি কেউ ছিলো?”
+      “ না, আর কেউ আছিলো না। নাস্তা খাওয়া শেষ করার পর আমি চইলা আইছি। আর কিছু জানি না। ক্যান স্যার, কি হয়ছে?”
+      “ কিছু না, আচ্ছা তুই ঘুমাতে যা। “
+      
+      সিফাত এবং অর্নব হতাশ হয়ে ঘরে ফিরে আসে। একটি সোর্স অবশেষে পাওয়া গিয়েছিলো কিন্তু সেটা কোনো কাজে আসে নি। কেউই খাওয়া দাওয়া করে নি। ক্লান্ত শরির নিয়ে ঘুমাতে যায় তারা।  
+      
+      পরদিন সকালে ঘুম থেকে উঠে কলেজের উদ্দেশ্যে বের হয় দুজন। উদ্দেশ্য এর আগে ফয়সাল নামের যে ছেলেটি আত্মহত্যা করেছিলো তার সম্পর্কে তথ্য সংগ্রহ করা। তারা দুজন রেজিস্ট্রি অফিসে ফয়সালের তথ্য বের করার চেষ্টা করে। অনেক আগের হওয়ায় তেমন কোনো তথ্য পাওয়া যায় নি। শুধু এতটুকো জানা গিয়েছে যে সে খুব মেধাবী ছেলে ছিল, তার ডিপার্ট্মেন্টে সে সবসময় প্রথম হতো। তাঁদের কাছে সবকিছু এলোমেলো মনে হচ্ছে। হঠাত সিফাতের রফিক স্যারের আত্মহত্যা সম্পর্কিত খবরগুলোর কথা মনে হলো। 
+      
+      সিফাত এবং অর্নব সন্ধায় রফিক স্যারের বাসায় এলো। রফিক স্যার দরজা খোলে দিলেন।
+      
+      “ এসো, এসো, আমি ভাবছিলাম তুমাদের সাথে দেখা করবো। যা হওয়ার হয়ে গিয়েছে এখন নিজেদের সাস্থের খেয়াল রাখো। “
+      “ জ্বি স্যার, রাখবো। স্যার, আপনি একদিন বলেছিলেন আপনি আত্মহত্যা নিয়ে বিভিন্ন তথ্য গবেষনা করেছিলেন। আমরা কি সেই তথ্যগুলো দেখতে পারি? “
+      “ নিশ্চয়, এসো আমার সাথে”
+      রফিক স্যার সিফাত এবং অর্নবকে অন্য একটি ঘরে নিয়ে যায়। ঘরে ঢুকে অর্নব এবং সিফাত চারপাশে তাকিয়ে ……
+    </p>
+
+</section>
+ 
+
+ 
+ <!-- footer -->
+
+ <footer class="footer footer-center p-10 bg-slate-500 text-black">
+    <aside>
+      <img src="../../images/logo.png" alt="logo" height="150" width="150">
+      <p class="font-bold text-3xl">
+        Israq's Library
+      </p> 
+      <p class="text-sm font-semibold max-w-md">Hi, I am SM Ragib Israq Daiyan. <br> The objective of this website is to make the books easily accessible to my beloved people.  When it comes to entertainment, <br>reading book is the best. </p>
+      <p class="mt-2">Copyright © 2024 - All right reserved</p>
+    </aside> 
+    <nav>
+      <div class="grid grid-flow-col gap-4 text-3xl">
+        <a href="https://www.facebook.com/shah.daiyan" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@durnibarpathshala" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://wa.me/+8801612073102" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </nav>
+  </footer>
+</body>
+</html>

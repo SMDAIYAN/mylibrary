@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <!-- fontawesome -->
+     <script src="https://kit.fontawesome.com/37a0095394.js" crossorigin="anonymous"></script>
+     <!-- daisy ui and tailwind -->
+ <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+ <script src="https://cdn.tailwindcss.com"></script>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- custom styles -->
+     
+     <style>
+        * {box-sizing: border-box;}
+        body {font-family: Verdana, sans-serif;}
+        .mySlides {display: none;}
+        img {vertical-align: middle;}
+        
+        /* Slideshow container */
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+        
+        /* Caption text */
+        .text {
+          color: #f2f2f2;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+        }
+        
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        
+        /* The dots/bullets/indicators */
+        .dot {
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+        
+        .active {
+          background-color: #717171;
+        }
+        
+        /* Fading animation */
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+          .text {font-size: 11px}
+        }
+        </style>
+     
+     <!--  -->
+     <title>SM ISRAQ'S LIBRARY</title>
+ </head>
+ <body>
+
+ 
+  <div class="navbar bg-slate-400 fixed z-50">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a href="https://smdaiyan.github.io/mylibrary/">Homepage</a></li>
+            <li><a href="mailto:durnibarpathshala@gmail.com" target="_blank">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-center">
+        <a href="https://smdaiyan.github.io/mylibrary/" class="btn btn-ghost text-xl font-extrabold"><img src="../../images/logo.png" class="h-12 w-12">Israq's Library</a>
+      </div>
+      <div class="navbar-end">
+       <label class="swap swap-rotate">
+
+         <!-- this hidden checkbox controls the state -->
+         <input type="checkbox" class="theme-controller" value="synthwave" />
+         
+         <!-- sun icon -->
+         <svg class="swap-on fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/></svg>
+         
+         <!-- moon icon -->
+         <svg class="swap-off fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg>
+         
+       </label>
+            
+      </div>
+    </div>
+    
+    <!-- slider starts -->
+
+    <div class="slideshow-container relative top-16 mb-16" >
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../../images/cr-1.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../../images/cr-2.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../../images/cr-3.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../../images/cr-4.jpg" style="width:100%">
+          <div class="text" style="color: rgb(0, 0, 0);  font-size: 30px;"></div>
+        </div>
+
+        
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+
+        </div>
+        
+        <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2500); // Change image every 2 seconds
+        }
+        </script>
+ <!--  story -->
+<section class="mx-4">
+    <h1 class="text-xl text-slate-500 text-center">Note: চোখে আলো লাগলে উপরে ডান কোণায় চাঁদের আইকনে ক্লিক করে ব্যাকগ্রাউন্ড কালো করে নিন</h1>
+    <h1 class="my-4 text-2xl font-extrabold underline"> কে সে? পর্ব - ১০ </h1>
+    <p class="text-xl font-bold">
+       
+সিফাতের মস্তিষ্ক লাগামহীন ঘোড়ার মতো উত্তর খুঁজে বেড়াচ্ছে। মিথ্যেও বলা যাবে না। স্বর্ণালি অবশ্যই তদন্ত কর্মকর্তার নাম জানে। সিফাত রাতুলের রিপোর্টটি মনে করার চেষ্টা করলো। হঠাৎ সিফাতের মনে পড়লো সংবাদ প্রতিবেদনে অফিসার্স ইনচার্জের নাম উল্লেখ ছিলো। একজন সাব ইন্সপেক্টর।  
+-- মিস্টার সিফাত, কিছু ভাবছেন? 
+-- না, কিছু না। ওসি রবিউল।  
+-- হ্যা। আপনি ঠিক বলেছেন। উনার কি বদলি হয়ে গিয়েছে ?
+আবারো একে অপরের দিকে তাকালো সিফাত এবং অর্নব। অর্নব ভেবে পাচ্ছে না সিফাত ওসি রবিউল এর নাম পেলো কোথায় তাও আবার সঠিক৷ এদিকে সিফাত ভাবছে কোনোভাবে রবিউল নামটা বলা গেলেও এখন রবিউল সাহেবের বদলির খবর কোথায় পাবে। যতই আত্মবিশ্বাস ধরে রাখার চেষ্টা করছে ততই যেন ভেঙে পড়তে চাইছে।  আন্দাজে একটা কিছু বলে দেয়া যাক। কারণ এই সম্পর্কে স্বর্ণালির কাছেও কোনো তথ্য থাকার কথা না। 
+-- হ্যা, উনার বদলি হয়ে গিয়েছে। উনি এখন অন্য থানার দায়িত্বে আছেন। 
+-- আচ্ছা, বলুন তাহলে আপনাদের আমি কি তথ্য দিতে পারি। 
+-- রাতুল সাহেব যেদিন আত্মহত্যা করেছিলেন সেদিন বা তার কিছুদিন আগে কি উনার সাথে আপনার কথা কাটাকাটি বা কোনো বিষয়ে মনমালিন্য হয়েছিল?
+-- এসব বিষয় আমি এর আগেও বলেছি। 
+সিফাত এবং অর্নব একে অপরের দিকে তাকাচ্ছে। সিফাত কি জিজ্ঞেস করবে ভেবে পাচ্ছে না। 
+-- আসলে এই বিষয়টি অত্যন্ত গুরুত্বপূর্ণ তাই আবার শুনতে চাচ্ছিলাম।
+-- না, আমার এবং আমাদের পরিবারের কারো সাথেই রাতুলের কোনো মনমালিন্য ছিলো না। 
+-- রাতুল সাহেব কি কোনো কিছু নিয়ে দুশ্চিন্তাগ্রস্ত বা আপসেট ছিলেন?
+-- না। রাতুল আর আমি পরের সপ্তাহে ঘুরতে যাওয়ার প্ল্যান করছিলাম। কি কি কেনাকাটা করতে হবে একসাথে সেগুলোর লিস্টও করেছিলাম৷ তার দুশ্চিন্তার কোনো কারণ ছিলো না৷ 
+-- রাতুল সাহেবের কোনো কলিগের সাথে কি কোনো বিষয়ে শত্রুতা ছিলো?
+-- না, রাতুল সবার কাছে খুব প্রিয় ছিল। বেয়ারা থেকে শুরু করে রাতুলের বস সবাই তাকে খুব পছন্দ করতো। 
+-- ধন্যবাদ স্বর্ণালি। আমার দায়িত্ব শেষ। আমার আর কিছু জিজ্ঞেস করার নেই। প্রয়োজনে আবার আসবো। 
+-- কোনো কিছু জানার প্রয়োজন হলে আমার সাথে ফোনে যোগাযোগ করবেন।
+সিফাত এবং অর্নব ফোন নাম্বারটি  নিয়ে দ্রুত স্বর্ণালির বাসা থেকে বেড়িয়ে এলো। বাসা থেকে বেড়িয়েই অর্নব সিফাতকে বললো-
+-- এত সুন্দর বাড়ি দেখে মনটা শান্ত হয়ে গিয়েছিলো। কিন্তু স্বর্ণালির সামনে যতক্ষন ছিলাম মনে হয়েছে যেন আমি অনেক বড় আপরাধী এবং আমাকে রিমান্ডে আনা হয়েছে।
+-- ঠিক বলেছিস। দম বন্ধ হয়ে আসছিলো।
+-- কিছু বুঝতে পারলি??
+-- নারে, একই অবস্থা। কোনো ক্লো নেই। চল রাতুলের হসপিটালে যাওয়া যাক।
+
+দুপুর হয়ে গিয়েছে। মাথার উপর সূর্য তার তাপ বিলিয়ে দিচ্ছে পুরো পৃথিবীতে।  সিফাত এবং অর্নব রাতুলের হসপিটালের উদ্দেশ্যে বের হলো। হসপিটালে পৌছে হসপিটালের ক্যান্টিনে তারা দুপুরের খাওয়া-দাওয়া সেরে নিলো। হসপিটালের ইনফরমেশন ডেস্কে গিয়ে রাতুল সম্পর্কে জিজ্ঞেস করলে জানতে পারর রাতুল ইমার্জেন্সি বিভাগে কর্মরত ছিলো। রাতুলের কলিগদের খুঁজে বের করে নিজেদের পুলিশ পরিচয় দিলেও আহামরি তেমন কিছু জানতে পারে না তারা। 
+হতাশ হয়ে হসপিটাল থেকে বেরিয়ে আসে দুজন। সন্ধ্যা হয়ে আসছে। হসপিটালের সামনে রাস্তার পাশে একটি বেঞ্চ দেয়া আছে। বেঞ্চে বসে সামনের দিকে অর্থহীন দৃষ্টিতে তাকিয়ে থাকে দুজন। হঠাৎ অর্নব বলে উঠে -
+-- নিলয় থাকতে কি সুন্দর ছিলো সময়গুলো। তিনজন যেকোনো কঠিন পরিবেশকেও স্বর্গ বানিয়ে নিতাম। আজ নিলয় বেঁচে থাকলে এখনের পরিবেশটা কতো সুন্দর করে তুলতো। 
+-- হ্যা, নিলয় খুব ভালো মনের ছেলে ছিলো। তবে চিরদিন কেউ থাকে না। একদিন আমিও থাকবো না, এটাই নিশ্চিত। 
+-- হুম। 
+পরিবেশটা হঠাৎ ভারী হয়ে উঠে। দুজন চুপচাপ বসে নিজেদের মতো ভাবতে থাকে। অর্নব জানে সিফাতের মনেও অনেক কথা আছে কিন্তু সে বলবে না।  
+একটা সময় অন্ধকার হয়ে আসলে তারা হোস্টেলে ফিরে যাওয়ার সিদ্ধান্ত নেই। বাস স্ট্যান্ড পর্যন্ত যেতে তাদের বেশ কিছুদূর হেটে যেতে হবে। তারা বেশ কিছুদূর হাটার পর একটা গলিতে ঢুকলো। এই গলির পরের রাস্তার পাশেই বাস স্ট্যান্ড। গলির রাস্তায় কোনো ল্যাম্পপোস্ট নেই। বেশ অন্ধকার।  রাস্তার বেশ অন্ধকার একটা অংশে পৌছালে রাস্তার পাশ থেকে কেউ একজন ঝাপিয়ে পড়ে সিফাতের উপর। পেছন থেকে সিফাতের মুখ চেপে ধরে সে।  অর্নবের সাথেও এমনটা করা হচ্ছে বুঝতে পারে সিফাত। অন্য একজন সিফাতের ডান হাত চেপে ধরে। সিফাত ডান হাতে ইঞ্জেকশনের সুই অনভব করে।  তারপর সিফাত জ্ঞান হারায়।
+....
+    </p>
+
+</section>
+ 
+
+ 
+ <!-- footer -->
+
+ <footer class="footer footer-center p-10 bg-slate-500 text-black">
+    <aside>
+      <img src="../../images/logo.png" alt="logo" height="150" width="150">
+      <p class="font-bold text-3xl">
+        Israq's Library
+      </p> 
+      <p class="text-sm font-semibold max-w-md">Hi, I am SM Ragib Israq Daiyan. <br> The objective of this website is to make the books easily accessible to my beloved people.  When it comes to entertainment, <br>reading book is the best. </p>
+      <p class="mt-2">Copyright © 2024 - All right reserved</p>
+    </aside> 
+    <nav>
+      <div class="grid grid-flow-col gap-4 text-3xl">
+        <a href="https://www.facebook.com/shah.daiyan" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@durnibarpathshala" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://wa.me/+8801612073102" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </nav>
+  </footer>
+</body>
+</html>

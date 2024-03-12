@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <!-- fontawesome -->
+     <script src="https://kit.fontawesome.com/37a0095394.js" crossorigin="anonymous"></script>
+     <!-- daisy ui and tailwind -->
+ <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+ <script src="https://cdn.tailwindcss.com"></script>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- custom styles -->
+     
+     <style>
+        * {box-sizing: border-box;}
+        body {font-family: Verdana, sans-serif;}
+        .mySlides {display: none;}
+        img {vertical-align: middle;}
+        
+        /* Slideshow container */
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+        
+        /* Caption text */
+        .text {
+          color: #f2f2f2;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+        }
+        
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        
+        /* The dots/bullets/indicators */
+        .dot {
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+        
+        .active {
+          background-color: #717171;
+        }
+        
+        /* Fading animation */
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+          .text {font-size: 11px}
+        }
+        </style>
+     
+     <!--  -->
+     <title>SM ISRAQ'S LIBRARY</title>
+ </head>
+ <body>
+
+ 
+  <div class="navbar bg-slate-400 fixed z-50">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a href="https://smdaiyan.github.io/mylibrary/">Homepage</a></li>
+            <li><a href="mailto:durnibarpathshala@gmail.com" target="_blank">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-center">
+        <a href="https://smdaiyan.github.io/mylibrary/" class="btn btn-ghost text-xl font-extrabold"><img src="../../images/logo.png" class="h-12 w-12">Israq's Library</a>
+      </div>
+      <div class="navbar-end">
+       <label class="swap swap-rotate">
+
+         <!-- this hidden checkbox controls the state -->
+         <input type="checkbox" class="theme-controller" value="synthwave" />
+         
+         <!-- sun icon -->
+         <svg class="swap-on fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/></svg>
+         
+         <!-- moon icon -->
+         <svg class="swap-off fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg>
+         
+       </label>
+            
+      </div>
+    </div>
+    
+    <!-- slider starts -->
+
+    <div class="slideshow-container relative top-16 mb-16" >
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../../images/cr-1.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../../images/cr-2.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../../images/cr-3.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../../images/cr-4.jpg" style="width:100%">
+          <div class="text" style="color: rgb(0, 0, 0);  font-size: 30px;"></div>
+        </div>
+
+        
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+
+        </div>
+        
+        <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2500); // Change image every 2 seconds
+        }
+        </script>
+ <!--  story -->
+<section class="mx-4">
+    <h1 class="text-xl text-slate-500 text-center">Note: চোখে আলো লাগলে উপরে ডান কোণায় চাঁদের আইকনে ক্লিক করে ব্যাকগ্রাউন্ড কালো করে নিন</h1>
+    <h1 class="my-4 text-2xl font-extrabold underline"> কে সে? পর্ব - ৮  </h1>
+    <p class="text-xl font-bold">
+     
+
+      বেশ অনেকক্ষন ঘুমানোর পর চোখ খোলে সিফাত। হাত পা এখনো চেয়ারের সাথে বাধা।  চারিদিকে তাকিয়ে দেখতে থাকে সিফাত। তার সামনে একটু দূরেই একটি মনিটরের সামনে বসে সিসি ক্যামেরাতে নজরদারি করছে একটি লোক। সিফাতের ডান পাশে অন্য একটি লোককে দেখতে পায় সিফাত। লোকটি সাদা এপ্রোন পরিহিত, হাতে গ্লাভস, মুখে এয়ার টাইট মাস্ক, চোখে সাদা গ্লাস।  হাতে একটি বিকার নিয়ে তাতে কয়েক ড্রপ কিছু একটা কেমিক্যাল মেশাচ্ছে সে। সিসি ক্যামেরা চেক করা লোকটি সিফাতের ঘুম ভেঙেছে লক্ষ্য করে তার দিকে এগিয়ে আসে। 
+      
+      -  কি মিস্টার সিফাত, কেমন অনুভব করছেন..? 
+      - আমাকে কেন ধরে এনেছ? তুমরা কারা? 
+      - এত উত্তেজিত হবেন না। আমি জানি আপনি অনেক বুদ্ধিমান একজন লোক। গত ৭ দিন ধরে আপনাকে আমি নজরদারিতে রেখেছি। ভাববেন না আমি অশিক্ষিত, আমি একজন সফটওয়্যার ইঞ্জিনিয়ার। পাশের দেশ ভারত থেকে সামরিক প্রশিক্ষণ প্রাপ্ত।  
+      - আমাকে কেন এসব বলছো? আমার কাছে তুমরা কি চাও?
+      - প্রাপ্ত সম্মান পাওয়ার জন্য আমার পরিচয় দিলাম আপনাকে। আশা করি সম্মান দিয়ে কথা বলবেন। নাহলে সম্মান আদায় করে নেব। নিলয় মারা গিয়েছে আত্মহত্যা করে। এরপরেও কেন আপনি এত তদন্ত করছেন? কোন বিষয়টির জন্য আপনার কাছে আত্মহত্যাটি সন্দেহজনক মনে হয়েছে? আমাদের পরবর্তী অপারেশনগুলো সফলভাবে শেষ করতে এই তথ্য খুব গুরুত্বপূর্ণ। 
+      - তার মানে আমার সন্দেহই ঠিক। নিলয়কে তুমরাই হত্যা করেছ? 
+      - হা হা হা, আমাদের সম্পর্কে তুমার কোনো ধারণা নেই। আমিতো শুধু একজন কর্মচারী মাত্র। তুমাকে বলা যেতেই পারে কারণ তুমি কিছুক্ষন পর আর পৃথিবীতে থাকবে না। তোমার বন্ধু নিলয়কে আমাদের সংগঠনের পরিকল্পনাতে হত্যা করা হয়েছে। এখন আমার প্রশ্নের উত্তর দাও, তুমার কেন সন্দেহ হলো?
+      
+      রাগে সিফাতের পুরো শরির কাপছে।  তার ইচ্ছে হচ্ছে এখনি লোকটির গলা টিপে ধরতে। কিন্তু সে দ্রুত নিজেকে সামলে নিল। 
+      
+      - তুমরা কেন নিলয়কে হত্যা করলে? 
+      - তুমার প্রশ্নের উত্তর দেয়ার জন্য তুমাকে ধরে আনিনি। আমি বল প্রয়োগ করতে চায় না। তুমি একজন বুদ্ধিমান ছেলে, তুমার উচিৎ হবে কষ্ট পাওয়া ছাড়া প্রতিটি কথার উত্তর দেয়া। 
+      
+      অন্যদিকে গুলজার দ্রুত চিন্তা করছে। তার ব্যাগ থেকে দ্রুত খাবার ডেলিভারি করার পোশাকটি বের করে পরিধান করে ফেলে। খাবারের ব্যাগের মধ্যে সে তার প্রিয় ওয়ালথার পি পি সেমি অটোমেটিক পিস্তল, একটি তার কাটার যন্ত্র, একটি মাস্ক, একটি স্মোক গ্রেনেড, একটি এয়ারটাইট চশমা, একটি ছুড়ি এবং একটা ছোট মরিচ ব্লেন্ড করে তৈরি করা মরিচের স্প্রে  নিয়ে নেয় । 
+      গুলজার তার ল্যাপটপ থেকে বাড়িটির একটি ফ্ল্যাটের সদস্যের নাম্বার ক্লোন করে বাড়িটির গার্ড কে কল করে। গলার স্বর পরিবর্তন করে বলে
+      - শুনো, আমি খাবার অর্ডার করেছি। ডেলিভারি বইকে আটকিয়ো না।
+      - জ্বি, আচ্ছা স্যার।
+      
+      গুলজার দ্রুত তার বাইক নিয়ে বাড়িটির গেইটে চলে আসে। সিসি ক্যামেরা থেকে বাচতে সে ক্যাপ পড়েছে। দারোয়ান কে খাবার ডেলিভারির কথা বলতেই ভেতরে যাওয়ার অনুমতি দিয়ে দিল। বাড়িটির নিচতলা পুরোটা গ্যারেজ এবং জেনারেটর ঘর। গুলজারের বাড়ির পুরো নকশা মুখস্ত। সে সোজা জেনারেটর ঘরে গিয়ে ব্যাগ থেকে কাটার বের করে জেনেরেটর এর ফেইজের তার কেটে দেয়। তারপর ইলেকট্রিসিটির মেইন সুইচ বন্ধ করে তিনটি জায়গায় তার কেটে দেয় যেন সে সময় বেশি পায়। সে দ্রুত তার মোবাইলে টর্চ অন করে সিড়ি বেয়ে উপরে উঠতে থাকে। ফ্ল্যাট ডি-৫ এর সামনে এসে সে সজোড়ে দড়জায় কয়েকবার ধাক্কা দেয়। তখন শব্দ শুনতে পেয়ে সিফাতের সামনে থেকে উঠে এসে টর্চ নিয়ে দড়জার কাছে এসে দরজার লেন্স দিয়ে ওপাশে কে দেখার চেষ্টা করে লোকটি। কিন্তু বিদ্যুৎ না থাকায় অন্ধকারে কিছুই দেখতে না পেয়ে বলে উঠে
+      - কে? কি দরকার?
+      - স্যার, আমি গেইটের গার্ড। আপনারা আজকে একজন অসুস্থ লোককে নিয়ে আসার সময় এই ব্যাগটি লোকটির পকেট থেকে পরে যায়। 
+      ব্যাগে গুরুত্বপূর্ণ কিছু থাকতে পারে ভেবে দরজা খোলে দেয় লোকটি। ঠিক তখনি গুলজার তার হাতে থাকা মরিচের স্প্রেটি লোকটির চোখ বড়াবর স্প্রে করে। লোকটি চিৎকার করতে গেলে দ্রুত লোকটির পিছন থেকে এক হাতে মুখ চেপে ধরে গুলজার এবং অপর হাতে থাকা স্মোক গ্রেনেডটি ঘরের ভেতর ছুড়ে মারে।  ব্যাগ থেকে সবকিছু আগেই বের করে নিয়েছিল গুলজার। পকেট থেকে পিস্তলটি বের করে তার কপালে চেপে ধরে গুলজার। এবং চিতকার না করার হুমকি দেয়। তার চোখে গ্লাস থাকায় তার তাকাতে তেমন সমস্যা হচ্ছে না তবে পুরু ঘরে ধোয়ায় কিছুই দেখা যাচ্ছে না। লোকটিকে সিফাতের অবস্থান বলতে বলে গুলজার। একটা সময় আন্দাজে সিফাতের চেয়ার কাছে আসে গুলজার।  তখন সে ধরে রাখা লোকটিকে জূড়ে ধাক্কা দিয়ে দূরে সরিয়ে দেয়। সে মরিচের জন্য চোখ খোলতে পারবে না, পারলেও ধোয়ায় কিছু দেখবে না। ঘরে থাকা অন্য লোকটি টর্চ লাইট হাতে চেচাচ্ছে কিন্ত ধোয়ায় লাইটের আলো কাজে আসছে না। গুলজার পকেট থেকে ছুড়ি বের করে আন্দাজে হাতরে সিফাতের দড়িগুলো কেটে দেয়। সিফাত চেচালে তাকে শান্ত করে গুলজার। সিফাতের একটি হাত ধরে অপর হাতে দেয়াল স্পর্শ করে করে ঘর থেকে বেরিয়ে আসে তারা। দ্রুত সিড়ি দিয়ে নিচে নেমে আসে তারা। দাড়োয়ানদের টর্চলাইট হাতে জেনারটর ঘরে দেখা যাচ্ছে। গুলজার সিফাতের দিকে তাকায় এবং বলে
+      - আমাদের খুব দ্রুত দৌড়ে বেরিয়ে যেতে হবে। গেইটের বাইরে আমার বাইক আছে। 
+      সিফাত সম্মতি জানালে তারা দৌড়ানো শুরু করে, পেছন থেকে একজন গার্ড দেখে ফেললে সবাই তাদের পেছনে ধাওয়া করে। তারা এর মধ্যে গেইটের বাইরে চলে আসে। গুলজার সেল্ফ বাটনে প্রেস করে বাইক স্টার্ট করে সিফাতকে নিয়ে দ্রুত চলে আসে। 
+      ------- 
+
+    </p>
+
+</section>
+ 
+
+ 
+ <!-- footer -->
+
+ <footer class="footer footer-center p-10 bg-slate-500 text-black">
+    <aside>
+      <img src="../../images/logo.png" alt="logo" height="150" width="150">
+      <p class="font-bold text-3xl">
+        Israq's Library
+      </p> 
+      <p class="text-sm font-semibold max-w-md">Hi, I am SM Ragib Israq Daiyan. <br> The objective of this website is to make the books easily accessible to my beloved people.  When it comes to entertainment, <br>reading book is the best. </p>
+      <p class="mt-2">Copyright © 2024 - All right reserved</p>
+    </aside> 
+    <nav>
+      <div class="grid grid-flow-col gap-4 text-3xl">
+        <a href="https://www.facebook.com/shah.daiyan" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@durnibarpathshala" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://wa.me/+8801612073102" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </nav>
+  </footer>
+</body>
+</html>

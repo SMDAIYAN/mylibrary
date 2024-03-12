@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <!-- fontawesome -->
+     <script src="https://kit.fontawesome.com/37a0095394.js" crossorigin="anonymous"></script>
+     <!-- daisy ui and tailwind -->
+ <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+ <script src="https://cdn.tailwindcss.com"></script>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- custom styles -->
+     
+     <style>
+        * {box-sizing: border-box;}
+        body {font-family: Verdana, sans-serif;}
+        .mySlides {display: none;}
+        img {vertical-align: middle;}
+        
+        /* Slideshow container */
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+        
+        /* Caption text */
+        .text {
+          color: #f2f2f2;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+        }
+        
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        
+        /* The dots/bullets/indicators */
+        .dot {
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+        
+        .active {
+          background-color: #717171;
+        }
+        
+        /* Fading animation */
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+          .text {font-size: 11px}
+        }
+        </style>
+     
+     <!--  -->
+     <title>SM ISRAQ'S LIBRARY</title>
+ </head>
+ <body>
+
+ 
+  <div class="navbar bg-slate-400 fixed z-50">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a href="https://smdaiyan.github.io/mylibrary/">Homepage</a></li>
+            <li><a href="mailto:durnibarpathshala@gmail.com" target="_blank">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-center">
+        <a href="https://smdaiyan.github.io/mylibrary/" class="btn btn-ghost text-xl font-extrabold"><img src="../../images/logo.png" class="h-12 w-12">Israq's Library</a>
+      </div>
+      <div class="navbar-end">
+       <label class="swap swap-rotate">
+
+         <!-- this hidden checkbox controls the state -->
+         <input type="checkbox" class="theme-controller" value="synthwave" />
+         
+         <!-- sun icon -->
+         <svg class="swap-on fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/></svg>
+         
+         <!-- moon icon -->
+         <svg class="swap-off fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg>
+         
+       </label>
+            
+      </div>
+    </div>
+    
+    <!-- slider starts -->
+
+    <div class="slideshow-container relative top-16 mb-16" >
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../../images/cr-1.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../../images/cr-2.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../../images/cr-3.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../../images/cr-4.jpg" style="width:100%">
+          <div class="text" style="color: rgb(0, 0, 0);  font-size: 30px;"></div>
+        </div>
+
+        
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+
+        </div>
+        
+        <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2500); // Change image every 2 seconds
+        }
+        </script>
+ <!--  story -->
+<section class="mx-4">
+    <h1 class="text-xl text-slate-500 text-center">Note: চোখে আলো লাগলে উপরে ডান কোণায় চাঁদের আইকনে ক্লিক করে ব্যাকগ্রাউন্ড কালো করে নিন</h1>
+    <h1 class="my-4 text-2xl font-extrabold underline"> কে সে? পর্ব -১ </h1>
+    <p class="text-xl font-bold">
+
+
+ 
+জানালার সামনে থেকে ছায়া মত কিছু অতিক্রম করে গেল বলে মনে হলো সিফাতের। হাতের বাম পাশে জানালা, উবু হয়ে বিছানায় রাখা ছড়ানো কিছু কাগজপত্রে মনযোগ দিয়ে কিছু খুঁজছিলো সিফাত। পাশের দেয়ালে থাকা লাইটের সুইচ এক হাতে বন্ধ করে জানালার দিকে না তাকিয়ে সতর্কতার সাথে কিন্তু দ্রুত জানালার পাশের দেয়ালে শরীর মিশিয়ে দিল সিফাত। যেন এটা তা্র দৈনন্দিন কাজেরই অংশ। বাইরে থেকে চাঁদের আলো জানালা দিয়ে ঘরে  প্রবেশ করছে। ফ্লোরে যেখানে চাঁদের আলো পড়ছে সিফাত সেখানে এক দৃষ্টিতে তাকিয়ে আছে। যদি কোনো অস্তিত্ব জানালা দিয়ে কিছু দেখার চেষ্টা করে তবে যেন ফ্লোরে পরা চাঁদের আলোতে তার ছায়া দেখে আকৃতি সম্পর্কে ধারণা পেতে পারে। সিফাত খুব ধৈর্যশীল এবং আত্মবিশ্বাসী একজন ছেলে। সে তার শ্বাস-প্রশ্বাস ধীরে নেয়ার চেষ্টা করছে যেন কোনো ধরনের শব্দ হওয়ার সম্ভাবনা না থাকে। সে দৃড় সংকল্পবদ্ধ  সূর্য উঠার আগ পর্যন্ত সে এই অবস্থাতেই অপেক্ষা করবে। ৪০-৪৫ মিনিট পর ফ্লোরে পড়া চাঁদের আলোই একটা ছোট গোলাকৃতির ছায়া দেখা দিল, উত্তেজনায় পুরো শরীর জেগে উঠল সিফাত এর। ছায়াটি ধীরে ধীরে বড় হচ্ছে, সিফাত জানালার দিকে তাকানোর ইচ্ছা দমন করে ফ্লোরে ছায়াটির দিকে এক দৃষ্টীতে তাকিয়ে আছে। হঠাৎ বড় কোনো পাখির পাখা ঝাপটানোর আওয়াজ হলো এবং ছায়াটি পুরো জানালায় ঝাপটা দেয়ার মতো করে ১ সেকেন্ড এর জন্য পুরো জানালা ঢেকে দেয় এবং পরক্ষণেই মিলিয়ে যায়। ফ্লোরে পড়া চাঁদের আলো নিমিষেই এক মুহূর্তের জন্য অন্ধকার হয়ে আবার আলোকিত হয়ে যায়। এবার সিফাত আর নিজের ইচ্ছাকে দমন করে রাখতে পারলো না। এক লাফে জানালার সামনে এসে চতুর্দিকে তাকিয়ে কিছুই দেখতে পেলো না সে।   
+
+তিন বছর আগের কথা। নিলয়, অর্নব আর সিফাত স্কুল জীবনের বন্ধু। নিলয় খুব হাসি-খুশি এবং মিশুক, যেকোনো গম্ভীর পরিস্থিতেকে মূহূর্তের মধ্যেই আনন্দদায়ক করে তুলে, কোনো সমস্যা নিয়েই তার কোনো মাথাব্যাথা নেই। অর্নব প্রতিদিন একটা নতুন বিষয় নিয়ে কৌতুহল হয়ে উঠে এবং সারাদিন যার সাথেই দেখা হোক এই বিষয়ে আলোচনা সে করবেই। সিফাত গম্ভীর প্রকৃতির ছেলে। সে কি ভাবছে, কোনো বিষয় পছন্দ করছে কি করছে না সেটা তার চেহারা দেখে বুঝার উপায় নেই, নিজ থেকে কখনো কোনো কথা সে বলে না। নিলয় আর অর্নব যাই করে সিফাত নিরবে তাদের সাথে থাকে কিন্তু তার আগ্রহ বা অনাগ্রহ কোনো কিছুই প্রকাশ করে না। কিছু বৈশিষ্ট্য ছাড়া প্রায় সকল ব্যাপারেই তিন বন্ধুর চিন্তা-ভাবনা একইরকম। দেখতে দেখতে একসময় স্কুল জীবন, কলেজ জীবন শেষ করে একটা সুপরিচিত বিশ্ববিদ্যালয়ে একই বিষয়ে ভর্তি হয় তিনজন। যদিও সিফাত আরো ভালো বিশ্ববিদ্যালয়ে ভালো বিষয়ে পড়ার সুযোগ পেয়েছিলো কিন্তু কেন যেন দুই বন্ধুর বিশ্ববিদ্যালয়ে এসেই ভর্তী হলো। সিফাতকে পেয়ে নিলয় আর অর্নব খুশিতে আত্মহারা। বিশ্ববিদ্যালয়ে থাকার জায়গা খুঁজে বের করতে মরিয়া হয়ে উঠে ৩ বন্ধু। হোস্টেলে সিট নেই। অনেক খুঁজ নিয়ে জানতে পারে একটা পরিত্যাক্ত ঘর আছে, মাঝারি ধরনের। প্রায় ৭ বছর আগে এক ছেলে পারিবারিক কারণে এই ঘরে আত্মহত্যা করেছিলো। এরপর থেকে নানা গুজব ছড়ানোর কারণে বাধ্য হয়ে এই ঘরটি কর্তৃপক্ষ বন্ধ করে দেয়। তাঁরা হোস্টেল ব্যবস্থাপক কে অনেক অনুরোধ করে এই ঘরটিতে থাকার অনুমতি নেই। ঘরে ঢুকেই ঘরের দেয়ালে অনেক লিখা আর বিভিন্ন সাংকেতিক চিহ্ন দেখতে পায় তাঁরা। তাঁরা তিনজনই বাস্তববাদী ছিল তাই সবকিছু মানুষিক অসুস্থ ছেলের কর্মকান্ড বলে হেসে উড়িয়ে দিলো। ঘরটিতে একটি  এটাচড ওয়াশরোম আছে। ঘরটি পরিষ্কার করে সেদিনই সবাই জিনিস-পত্র নিয়ে চলে আসে। শুরু হয় তাদের নতুন জীবন।   
+
+প্রথম দিন রাতে খাবার পর্ব শেষে নিলয় হাসি-ঠাট্টা করে পরিবেশ হালকা করতে চাইলে বুঝতে পারে তার কেন যেন কান্নার অনুভূতি হচ্ছে কিন্তু যতটুকু সম্ভব ব্যপারটা এড়িয়ে যায়। অর্নব তার অভ্যাসমত ঘরের সবকিছু পর্যবেক্ষন করছে যেন এমন কিছু পায় যাতে তার দুই বন্ধুকে তার পর্যবেক্ষন ক্ষমতা দিয়ে চমকে দিতে পারে, কিন্তু সেও হঠাৎ অনুভব করে যে তার মন কেন যেন খুব খারাপ হয়ে যাচ্ছে, মনে হচ্ছে আপন কি যেন এক জিনিস হারিয়ে ফেলেছে। অপরদিকে সিফাত তার অভ্যাসমত এক কোণায় বসে আফ্রিকার রহস্যময়ী একটি উপত্যকা সম্পর্কে একটি বই পড়ছিলো, কিন্তু সিফাতের না চাওয়া সত্বেও শৈশবের কথা মনে হতে লাগলো। তার মনে হচ্ছে তার শৈশবের সবচেয়ে প্রিয় একটা খেলনা সে ভেঙ্গে ফেলেছে। ভিতর থেকে কান্না চলে আসছে সিফাতের। অথচ সিফাত খুব শক্ত মানুষিকতার একজন ছেলে, আবেগ তার চিরসত্রু। কিন্তু কেউই তাদের অনুভূতি শেয়ার করলো না, অন্য বন্ধুরা হইতো দূর্বল ভাবতে পারে এই ভেবে। সবাই ফ্লোরে তুষক বিছিয়ে ঘুমানোর প্রস্তুতি নিলো। সেদিন রাতেই ঘটে গেল এক ব্যাখ্যাহীন আশ্চর্যজনক ঘটনা....... 
+
+    </p>
+
+</section>
+ 
+
+ 
+ <!-- footer -->
+
+ <footer class="footer footer-center p-10 bg-slate-500 text-black">
+    <aside>
+      <img src="../../images/logo.png" alt="logo" height="150" width="150">
+      <p class="font-bold text-3xl">
+        Israq's Library
+      </p> 
+      <p class="text-sm font-semibold max-w-md">Hi, I am SM Ragib Israq Daiyan. <br> The objective of this website is to make the books easily accessible to my beloved people.  When it comes to entertainment, <br>reading book is the best. </p>
+      <p class="mt-2">Copyright © 2024 - All right reserved</p>
+    </aside> 
+    <nav>
+      <div class="grid grid-flow-col gap-4 text-3xl">
+        <a href="https://www.facebook.com/shah.daiyan" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@durnibarpathshala" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://wa.me/+8801612073102" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </nav>
+  </footer>
+</body>
+</html>
