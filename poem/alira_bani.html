@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <!-- fontawesome -->
+     <script src="https://kit.fontawesome.com/37a0095394.js" crossorigin="anonymous"></script>
+     <!-- daisy ui and tailwind -->
+ <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+ <script src="https://cdn.tailwindcss.com"></script>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- custom styles -->
+     
+     <style>
+        * {box-sizing: border-box;}
+        body {font-family: Verdana, sans-serif;}
+        .mySlides {display: none;}
+        img {vertical-align: middle;}
+        
+        /* Slideshow container */
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+        
+        /* Caption text */
+        .text {
+          color: #f2f2f2;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+        }
+        
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        
+        /* The dots/bullets/indicators */
+        .dot {
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+        
+        .active {
+          background-color: #717171;
+        }
+        
+        /* Fading animation */
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+          .text {font-size: 11px}
+        }
+        </style>
+     
+     <!--  -->
+     <title>SM ISRAQ'S LIBRARY</title>
+ </head>
+ <body>
+
+ 
+  <div class="navbar bg-slate-400 fixed z-50">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a href="https://smdaiyan.github.io/mylibrary/">Homepage</a></li>
+            <li><a href="mailto:durnibarpathshala@gmail.com" target="_blank">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-center">
+        <a href="https://smdaiyan.github.io/mylibrary/" class="btn btn-ghost text-xl font-extrabold"><img src="../images/logo.png" class="h-12 w-12">Israq's Library</a>
+      </div>
+      <div class="navbar-end">
+       <label class="swap swap-rotate">
+
+         <!-- this hidden checkbox controls the state -->
+         <input type="checkbox" class="theme-controller" value="synthwave" />
+         
+         <!-- sun icon -->
+         <svg class="swap-on fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/></svg>
+         
+         <!-- moon icon -->
+         <svg class="swap-off fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg>
+         
+       </label>
+            
+      </div>
+    </div>
+    <!-- slider starts -->
+
+    <div class="slideshow-container relative top-16 mb-16" >
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../images/cr-1.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../images/cr-2.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../images/cr-3.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../images/cr-4.jpg" style="width:100%">
+          <div class="text" style="color: rgb(0, 0, 0);  font-size: 30px;"></div>
+        </div>
+
+        
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+
+        </div>
+        
+        <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2500); // Change image every 2 seconds
+        }
+        </script>
+ <!--  book list -->
+
+ <div class="px-10">
+
+    <h3 class="text-xl font-bold text-slate-500 my-5 text-center">Note:আলোতে সমস্যা হলে উপরের চাদের আইকনে ক্লিক করে ব্যাকগ্রাউন্ড কালো করে নিন! </h3>
+ 
+  <h1 class="text-xl font-extrabold underline">হযরত আলী (রাঃ) এর বাণী সমূহ:</h1>
+    <ul class="my-4">
+        <li>১। লোকের যে সমস্ত দোষ ত্রুটির উপর আল্লাহ পর্দা দিয়ে রেখেছেন তা তুমি প্রকাশ করার চষ্টা করো না।
+        </li>
+        <li>২। অজ্ঞদেরকে মৃত্যুবরণ করার পূর্বেই মৃত অবস্থায় কাল যাপন করতে হয় এবং সমাধিস্থ হবার পূর্বেই তাদের শরীর কবরের আঁধারে সমাহিত; কেননা তাদের অন্তর মৃত, আর মৃতের স্থান কবর।
+        </li>
+        <li>৩। অত্যাচারীর বিরুদ্ধে অত্যাচারিতের অন্তরে যে বিদ্বেষাগ্নির জন্ম হয়, তা অত্যাচারীকে ভস্ম করেই ক্ষান্ত হয় না, সে আগুনের শিখায় অনেক কিছুই দগ্ধীভূত হয়।
+        </li>
+        <li>৪। আপনার দ্বারা নেক কাজ সাধিত হলে আল্লাহ তা’আলার প্রশংসা করুন এবং যখন অসফল হবেন তাঁর কাছে ক্ষমা প্রার্থনা করুন।
+        </li>
+        <li>৫। সৎ কাজ অল্প বলে চিন্তা করো না, বরং অল্পটুকুই কবুল হওয়ার চিন্তা কর।
+        </li>
+        <li>৬। পাপের কাজ করে লজ্জিত হলে পাপ কমে যায়, আর পুণ্য কাজ করে গর্ববোধ করলে পুণ্য বরবাদ হয়ে যায়।
+        </li>
+        <li>৭। দুনিয়াতে সব চেয়ে কঠিন কাজ হচ্ছে নিজেকে সংশোধন করা আর সব চেয়ে সহজ কাজ হচ্ছে অন্যের সমালোচনা করা ।
+        </li>
+        <li>৮। তুমি পানির মত হতে চেষ্টা কর, যে কিনা নিজের চলার পথ নিজেই তৈরী করে নেয় ।পাথরের মত হয়োনা, যে নিজে অন্যের পথরোধ করে |
+        </li>
+        <li>৯। গোপন কথা যতক্ষণ তোমার কাছে আছে সে তোমার বন্দী । কিন্তু কারো নিকট তা প্রকাশ করা মাত্রই তুমি তার বন্দী হয়ে গেলে ।
+        </li>
+        <li>১০। ছোট পাপকে ছোট বলিয়া অবহেলা করিও না, ছোটদের সমষ্টিই বড় হয় ।
+        </li>
+        <li>১১। নীচ লোকের প্রধান হাতিয়ার অশ্লীল বাক্য ।
+        </li>
+        <li>১২। পুণ্য অর্জন অপেক্ষা পাপ বর্জন শ্রেষ্ঠতর ।
+        </li>
+        <li>১৩। মানুষের কিসের এত অহংকার, যার শুরু একফোটা রক্তবিন্দু দিয়ে আর শেষ হয় মৃত্তিকায় ।
+        </li>
+        <li>১৪। সবচেয়ে সাহসী ও বীর্যবান ব্যক্তি হলো সেই যে স্বীয় কামনা বাসনার খেয়াল খুশির উপর বিজয় লাভ করতে সক্ষম।
+        </li>
+        <li>১৫। হযরত আলী (রাঃ) কোথাও যাচ্ছিলেন। পথে এক ব্যক্তি অনাহুতভাবে তাকে গালাগাল দিতে শুরু করল। হযরত আলী লোকটির কাছে গিয়ে বললেন, ভাই! তুমি আমার সম্পর্কে যা কিছু বললে তা যদি সত্য হয় তবে আল্লাহ যেন আমাকে ক্ষমা করে দেন আর যদি তোমার এই সমস্ত কথা সত্য না হয় তবে আল্লাহ পাক যেন তোমাকে ক্ষমা করে দেন।
+        </li>
+        <li>১৬। প্রকৃত দ্বীনদারী পার্থিব স্বার্থ ত্যাগের মাধ্যমেই সম্ভব।
+        </li>
+        <li>১৭। কারো সাথে বাক্যলাপ না হওয়া পর্যন্ত তাকে তুচ্ছ জ্ঞান করোনা।
+        </li>
+        <li>১৮। কেউ স্বীকৃতি না দিলেও তুমি তোমার সদাচরণ অব্যাহত রাখবে।
+        </li>
+        <li>১৯। বন্ধুত্ব করার মত কোন যোগ্যলোক পাওয়া না গেলেও অযোগ্যদের সাথে বন্ধুত্ব করতে যেও না।
+        </li>
+        <li>২০। অল্প বিদ্যায় আমল বিনষ্ট হয়। শুদ্ধ জ্ঞানই আমলের পুর্ব শর্ত।
+        </li>
+        <li>২১। সততার মাধ্যমে একজন নিরীহ প্রকৃতির লোকও যে মর্যাদার অধিকারী হয়, বুদ্ধিমানেরা রকমারী কলাকৌশল প্রয়োগ করেও তার নিকটে পৌঁছতে পারে না।
+        </li>
+        <li>২২। ধন সম্পদের অহংকার থেকে আল্লাহর পানাহ চাও।এটা এমন একরোগ, যা মানুষকে ধ্বংসের শেষ পর্যায়ে পৌছিয়ে দেয়।
+        </li>
+        <li>২৩। সেই ব্যক্তির পক্ষেই সর্বাধিক সৎকর্ম করা সম্ভব,যে ক্রোধ নিয়ন্ত্রণে সক্ষম।
+        </li>
+        <li>২৪। সর্বাপেক্ষা করুণার পাত্র হচ্ছে ঐ ব্যক্তি-
+            <ul class="mx-8">
+                <li>ক) যে আলেম ব্যক্তির উপর জাহেলরা কতৃত্ব করে।
+                </li>
+                <li>খ) যে ভদ্রব্যক্তি কোন ইতর লোকের অধীন হয়ে পড়ে।
+                </li>
+                <li>গ) ঐ সৎব্যক্তি যার মাথার উপর পাপিষ্ঠ চেপে বসে।
+                </li>
+            </ul>
+        </li>
+        <li>২৫। সর্বোত্তম বক্তব্য সেটিই, স্বয়ং বক্তা যা কার্যে পরিণত করে।
+        </li>
+        <li>২৬। সর্বাপেক্ষা আহাম্মক ঐ ব্যক্তি যে অন্যের বদঅভ্যাসের প্রতি ঘৃণা পোষণ করে, এবং লোক চক্ষুর আড়ালে নিজেই সেই সব বদঅভ্যাসে জড়িত থাকে।
+        </li>
+        <li>২৭। দুনিয়া ও আখেরাত দুই সতীনের ন্যায়। স্বামী যেমন একজনকে খুশি করতে চাইলে অন্যজন ক্ষিপ্ত হয়। তেমনি কেউ দুনিয়ার জীবনকে সুখময় করতে চাইলে আখেরাতের ক্ষতি এবং আখেরাতকে নির্বিঘ্ন করতে চাইলে দুনিয়ার জীবনের ক্ষতি স্বীকার করা ছাড়া গত্যন্তর নেই।
+        </li>
+        <li>২৮। বুদ্ধিমানেরা বিনয়ের দ্বারা সম্মান অর্জন করে,আর বোকারা ঔদ্ধত্যের দ্বারা অপদস্ত হয়।
+        </li>
+        <li>২৯। অনুশোচনা খারাপ কাজকে বিলুপ্ত করে আর অহংকার ভালো কাজকে ধ্বংস করে।
+        </li>
+        <li>৩০। অনর্থক কামনা নিজেই একটি ধ্বংসাত্বক সঙ্গী,আর বদ-অভ্যাস সৃষ্টি করে একটি ভয়াবহ শত্রু ।
+        </li>
+        <li>৩১। বিপদে অস্থিরতা নিজেই একটি বড় বিপদ।
+        </li>
+        <li>৩২। দ্রুত ক্ষমা করে দেয়া সম্মান বয়ে আনে, আর দ্রুতপ্রতিশোধ পরায়ণতা অসম্মান বয়ে আনে ।
+        </li>
+        <li>৩৩। দুনিয়ার প্রতি ভালোবাসা যত বেশি হবে,আল্লাহর প্রতি ততোটাই কম হবে ।
+        </li>
+        <li>৩৪। মন্দ লোক অন্যদের সম্পর্কে ভালো ধারণা করতে পারে না, সর্বোচ্চ সে তাদেরকেও নিজের মত মনে করে।
+        </li>
+        <li>৩৫। যৌবনের অপচয়কৃত সময়ের ক্ষতি অবশ্যই পূরন করতে হবে, যদি তুমি সন্তোষজনক সমাপ্তি অনুসদ্ধান করো ।
+        </li>
+        <li>৩৬। নিজের মহানুভবতার কথা গোপন রাখো, আর তোমার প্রতি অন্যের মহানুভবতার কথা প্রচার করো।
+        </li>
+        <li>৩৭। আত্মতুষ্টি নিশ্চিতভাবে নির্বুদ্ধিতার লক্ষণ।
+        </li>
+        <li>৩৮। অভ্যাসকে জয় করাই পরম বিজয়।
+        </li>
+        <li>৩৯। অসৎ লোকের ধন - দৌলত পৃথীবিতে সৃষ্ট জীবের বিপদ - আপদের কারণ হয়ে দাঁড়ায়।
+        </li>
+        <li>৪০। অসৎ লোক কাউকে সৎ মনে করে না,সকলকেইসে নিজের মত ভাবে।
+        </li>
+        <li>৪১। অল্প দান করিতে লজ্জিত হইও না,কেননা বিমুখ করা অপেক্ষায় অল্প দান করা অনেক ভাল।
+        </li>
+        <li>৪২। পাপের কাজ করে লজ্জিত হলে পাপ কমে যায় "আর পুণ্য কাজ করে গর্ববোধ করলে পুণ্য বরবাদ হয়ে যায়।
+        </li>
+        <li>৪৩। পাচটি জিনিস খুব খারাপ,
+            <ul class="mx-8">
+                <li>ক/ আলেমের খারাপ কাজ,
+                </li>
+                <li>খ/ শাসকের লালসাবৃত্তি,
+                </li>
+                <li>গ/ বৃদ্ধের জেনাকারিতা,</li>
+                <li>ঘ/ ধনীর কৃপণতা,
+                </li>
+                <li>ঙ/ নারীর নির্লজ্জতা,
+                </li>
+            </ul>
+        </li>
+        <li>৪৪। প্রতিটি মানুষের মূল্য তার যোগ্যতায়।
+        </li>
+        <li>৪৫। মানুষের সাথে তাদের বুদ্ধি পরিমাণ কথা বলো।
+        </li>
+        <li>৪৬। অভিজাত লোকের হামলা সম্পর্কে সতর্ক হও যখন সে ক্ষুধার্ত হয়। আর ইতর লোকের হামলা হতে সতর্ক হও যখন সে পূর্ণ উদর হয়।
+        </li>
+        <li>৪৭। হৃদয়সমূহ একত্র করো এবং তা ধরে রাখতে হেকমতের আশ্রয় গ্রহণ করো । কেননা শরীরের ন্যায় হৃদয়ও ক্লান্তি ও একঘেয়েমী বোধ করে।
+        </li>
+        <li>৪৮। নফস হলো প্রবৃত্তির পূজারী। সহজগামী আমোদ-প্রমোদের অভিলাসী, কু-প্ররোচনায় অভ্যস্ত, পাপাচারে আসক্ত, আরাম প্রিয় ও কর্মবিমুখ। যদি তাকে বাধ্য করো তাহলে সে দুর্বল হয়ে পড়বে। আর যদি তাকে ছেড়ে দাও তাহলে (তুমি) ধ্বংস হয়ে যাবে।
+        </li>
+        <li>৪৯। তোমাদের কেউ যেন আপন প্রতিপালক ছাড়া অন্য কারো আশা না করে এবং তাঁর ‘শাস্তি’ ছাড়া অন্য কিছুকে ভয় না করে। তোমাদের কেউ যেন যা জানে না তা শিখতে এবং না জানা বিষয়ে জিজ্ঞাসিত হলে ‘জানি না’ বলতে সংকোচ বোধ না করে।
+        </li>
+        <li>৫০। অভাব বিচক্ষণ ব্যক্তিকেও যুক্তির ক্ষেত্রে নির্বাক করে দেয়। অভাবী যেন নিজ দেশেই পরবাসী।
+        </li>
+        <li>৫১। অক্ষমতা একটি বিপদ, ধৈর্যের অর্থ সাহসিকতা, ভোগ বিলাসিতায় নির্মোহতা অমূল্য সম্পদ এবং ধর্মানুরাগ জান্নাত লাভের মাধ্যম।
+        </li>
+        <li>৫২। শিষ্টাচার হলো চির-নতুন পোশাক এবং চিন্তা হলো স্বচ্ছ আয়না।
+        </li>
+        <li>৫৩। দুনিয়া যখন কারো প্রতি প্রসন্ন হয় তখন অন্যের গুণাবলীও তাকে ধার দেয়, কিন্তু যখন অপ্রসন্ন হয় তখন তার নিজস্ব গুণাবলীও ছিনিয়ে নেয়।
+        </li>
+        <li>৫৪। (অন্তরে) যে যাই গোপন করে তা তার জিহ্বার ফাঁকে বের হয়ে পড়ে এবং মুখণ্ডলের অভিব্যক্তিতে ধরা পড়ে।
+        </li>
+        <li>৫৫। আল্লাহ্ যখন তোমাকে স্বাধীন বানিয়েছেন তখন তুমি অন্যের গোলাম হয়ো না।
+        </li>
+        <li>৫৬। স্বপ্ন আর আকাঙ্ক্ষার উপর ভরসা করে বসে থেকো না, কেননা এটা হলো মূর্খ মানুষের পুঁজি।
+        </li>
+        <li>৫৭। মানুষ সব বুঝে বেঘোর, মৃত্যু আসা মাত্র জেগে উঠবে।
+        </li>
+        <li>৫৮। মানুষ যা জানে না তার প্রতি বিরূপ হয়ে থাকে।
+        </li>
+        <li>৫৯। যুগের (স্বভাব প্রকৃতির) সঙ্গে মানুষের সাদৃশ্য পিতৃ-সাদৃশ্যের চেয়ে অধিক।
+        </li>
+        <li>৬০। মানুষ তার জিহ্বার নীচে লুক্কায়িত থাকে।
+        </li>
+        <li>৬১। যে মানুষ আপন মর্যাদার সীমা বুঝে তার কোনো ধ্বংস নেই।
+        </li>
+        <li>৬২। কখনো কখনো একটি মাত্র শব্দ বিরাট বঞ্চনার কারণ হয়ে দাঁড়ায়।
+        </li>
+        <li>৬৩। জ্ঞান ও বুদ্ধিমত্তা যত বাড়বে , বক্তব্য তত কমবে ।
+        </li>
+        <li>৬৪। মানুষের প্রতিটি নি:শ্বাস মৃত্যুর পদক্ষেপ মাত্র ।
+        </li>
+        <li>৬৫। আমি তোমাদেরকে পাচটি বিষয় বলে দিচ্ছি, যদি তোমরা উটে চড়ে দ্রুত তা খুজে নাও তবে এর সুফল পাবে :
+            <ul class="mx-8">
+                <li>ক/ আল্লাহ ছাড়া আর কিছুতে আশা স্হাপন না করা
+                </li>
+                <li>খ/ নিজের পাপ ছাড়া আর কোন কিছুকে ভয় না করা
+                </li>
+                <li>গ/ যা নিজে জানো না সে বিষয়ে জিজ্ঞাসিত হলে 'আমি জানি না' বলতে লজ্জাবোধ না করা
+                </li>
+                <li>ঘ/ যা নিজে জানো না তা অন্যের কাছ থেকে শিক্ষা করতে লজ্জা না করা
+                </li>
+                <li>ঙ/ এবং ধৈর্য্য ধারণ করতে অভ্যাস করা , কারণ দেহের জন্য মাথা যেরূপ ঈমানের জন্য ধৈর্য্য তদ্রুপ ।
+                </li>
+            </ul>
+        </li>
+        <li>৬৬। আল্লাহর শাস্তি থেকে রক্ষা পাবার দুটি উপায় ছিল- একটি তুলে নেয়া হয়েছে অপরটি তোমাদের সম্মুখে রয়েছে । সুতরাং যেটা তোমাদের সম্মুখে রয়েছে তা তোমাদের মানতে হবে । রক্ষা পাবার যে উপায়টি তুলে নেয়া হয়েছে তা হলো আল্লাহর রাসূল (সা.) এবং যেটি এখনো আছে তা হলো ক্ষমা প্রার্থনা করা ।
+        </li>
+        <li>৬৭। ইসলামের যথার্থ ফেকাহবিদ সে যে আল্লাহর রহমত থেকে নিরাশ করে না, আল্লাহর দয়ার প্রতি হতাশ করে না এবং আল্লাহর শাস্তি থেকে নিরাপদ বলে মনে করিয়ে দেয় না ।
+        </li>
+        <li>৬৮। হীনতম জ্ঞান জিহ্বায় থাকে এবং উচ্চমানের জ্ঞান কর্মের মাঝে প্রকাশ পায় ।
+        </li>
+    </ul>
+    
+</div>
+ 
+ <!-- footer -->
+
+ <footer class="footer footer-center p-10 bg-slate-500 text-black">
+    <aside>
+      <img src="../images/logo.png" alt="logo" height="150" width="150">
+      <p class="font-bold text-3xl">
+        Israq's Library
+      </p> 
+      <p class="text-sm font-semibold max-w-md">Hi, I am SM Ragib Israq Daiyan. <br> The objective of this website is to make the books easily accessible to my beloved people.  When it comes to entertainment, <br>reading book is the best. </p>
+      <p class="mt-2">Copyright © 2024 - All right reserved</p>
+    </aside> 
+    <nav>
+      <div class="grid grid-flow-col gap-4 text-3xl">
+        <a href="https://www.facebook.com/shah.daiyan" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@durnibarpathshala" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://wa.me/+8801612073102" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </nav>
+  </footer>
+</body>
+</html>
