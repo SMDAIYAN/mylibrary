@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <!-- fontawesome -->
+     <script src="https://kit.fontawesome.com/37a0095394.js" crossorigin="anonymous"></script>
+     <!-- daisy ui and tailwind -->
+ <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+ <script src="https://cdn.tailwindcss.com"></script>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- custom styles -->
+     
+     <style>
+        * {box-sizing: border-box;}
+        body {font-family: Verdana, sans-serif;}
+        .mySlides {display: none;}
+        img {vertical-align: middle;}
+        
+        /* Slideshow container */
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+        
+        /* Caption text */
+        .text {
+          color: #f2f2f2;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+        }
+        
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        
+        /* The dots/bullets/indicators */
+        .dot {
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+        
+        .active {
+          background-color: #717171;
+        }
+        
+        /* Fading animation */
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+          .text {font-size: 11px}
+        }
+        </style>
+     
+     <!--  -->
+     <title>SM ISRAQ'S LIBRARY</title>
+ </head>
+ <body>
+
+ 
+  <div class="navbar bg-slate-400 fixed z-50">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a href="https://smdaiyan.github.io/mylibrary/">Homepage</a></li>
+            <li><a href="mailto:durnibarpathshala@gmail.com" target="_blank">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-center">
+        <a href="https://smdaiyan.github.io/mylibrary/" class="btn btn-ghost text-xl font-extrabold"><img src="../../images/logo.png" class="h-12 w-12">Israq's Library</a>
+      </div>
+      <div class="navbar-end">
+       <label class="swap swap-rotate">
+
+         <!-- this hidden checkbox controls the state -->
+         <input type="checkbox" class="theme-controller" value="synthwave" />
+         
+         <!-- sun icon -->
+         <svg class="swap-on fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/></svg>
+         
+         <!-- moon icon -->
+         <svg class="swap-off fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg>
+         
+       </label>
+            
+      </div>
+    </div>
+    
+    <!-- slider starts -->
+
+    <div class="slideshow-container relative top-16 mb-16" >
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../../images/cr-1.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../../images/cr-2.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../../images/cr-3.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="../../images/cr-4.jpg" style="width:100%">
+          <div class="text" style="color: rgb(0, 0, 0);  font-size: 30px;"></div>
+        </div>
+
+        
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+
+        </div>
+        
+        <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2500); // Change image every 2 seconds
+        }
+        </script>
+ <!--  story -->
+<section class="mx-4">
+    <h1 class="text-xl text-slate-500 text-center">Note: চোখে আলো লাগলে উপরে ডান কোণায় চাঁদের আইকনে ক্লিক করে ব্যাকগ্রাউন্ড কালো করে নিন</h1>
+    <h1 class="my-4 text-2xl font-extrabold underline"> কে সে? পর্ব - ১৪ </h1>
+    <p class="text-xl font-bold">
+       
+
+
+- আমরা এখন কি করবো?
+প্রশ্ন করলো সিফাত।
+- আমার মনে হচ্ছে এখানে তাদের তেমন কোনো নিরাপত্তার ব্যবস্থা নেই। কারণ আমরা যে বাউন্ডারির ভেতরে ঢুকে বসে আছি তারা এখন পর্যন্ত বুঝতে পারেনি। আমাদের ধীরে ধীরে ঘরটির পেছন দিকে এগুতে হবে। 
+- চলুন তাহলে!
+- এখন না। লোকগুলো আগে ঘরের ভেতরে যাক। তারপর আরও কিছুক্ষন অপেক্ষা করে আমাদের এগুতে হবে। কেননা আমরা মাত্র দুজন, তাই সাবধাণতা আর উপস্থিত বুদ্ধিই আমাদের প্রধাণ শক্তি।
+
+কিছুক্ষন পর জলিল নামের লোকটি ও তার সহচারীরা ঘরের ভেতরে চলে গেলে গোলজার ধীরে ধীরে সামনে এগুতে শুরু করে। গোলজারকে অনুসরণ করে সিফাত। তারা খুব সাবধানে খামারের মাঝের ঘরটির পেছনে এসে পৌছায়। ঘরটির পেছন দিকে একটি দরজা দেখতে পায় তারা৷ গোলজার দরজাটির দিকে এগিয়ে যায়৷ দরজাটি ভেতর থেকে লক করা। গোলজার তার বেগ থেকে একটি পেরেকের মতো যন্ত্র বের করে নিমিষেই দরজাটি খুলে ফেলে। ঘরের ভেতর অন্ধকার। গোলজার আর সিফাত ভেতরে ঢুকে। গোলজার ছোট একটি টর্চ জ্বালায়। ভেতরে বিছানা ও কিছু আসবাবপত্র ছাড়া কিছুই নেই। সেই রুমের দরজা খুব সাবধানে খোলে বাইরে তাকায় গোলজার। একটা করিডোরের মতো সরু রাস্তা বাম দিকে চলে গিয়েছে অন্য একটি ঘরে, সেখানে আলো জ্বলছে ও কথার শব্দ আসছে। গোলজার ধীরে ধীরে সামনে এগিয়ে যায় পেছনে সিফাতকে ইশারা দেয়। একটু সামনে এগুতেই সেই ঘরটির কাছে চলে আসে তারা। ঘরটি অনেক বড়। মাঝের সোফায় বসে আছে জলিল। তার সামের সোফায় অন্য একজন রেডিও ডিভাইসে কারো সাথে যোগাযোগ করার চেষ্টা করছে। রেডিও থেকে একটি কন্ঠ ভেসে আসছে
+- Last instructions have been followed or not ? (শেষ নির্দেশনা অনুসরণ করা হয়েছে না হয়নি)
+- Everything is going accordingly, sir (সবকিছে সেই অনুসারে হচ্ছে, স্যার)
+- Don’t delay to send confirmation message. (নিশ্চিত হয়ে খবর পাঠাতে দেরি করো না)
+- Roger, sir (আচ্ছা, স্যার)
+
+কিসের নির্দেশনার কথা বলা হচ্ছে বুঝতে পারছে না তারা। সিফাত অর্নব এর চিন্তা মাথা থেকে ফেলতে পারছে না তাই সে সেভাবে চিন্তা করতে পারছে না। 
+- ওরা কিসের কথা বলছে?
+- বুঝতে পারছি না। আমার অনেক কলিগ আছে যারা এখনো চাকরি করছে। তাদের মাধ্যমে ইন্টেলিজেন্স সংগ্রহ করা যেতে পারে। 
+
+গোলজার তার গোয়েন্দা বিভাগে কর্মরত বন্ধুদের কল করে তাদের শহরের আজকের খবরগুলো সংগ্রহ করার চেষ্টা করে। কিছু ছিনতাই, চুরি, একটি খুন, একটি গাড়ি এক্সিডেন্ট  ছাড়া তেমন কোনো ঘটনা আজকে ঘটেনি। 
+
+- আমার মনে হয় না এসব ঘটনার সাথে আপনার বন্ধুর সম্পর্ক আছে। কারন এই সংস্থা কখনো সরাসরি কাউকে খুন করে না। 
+- এই সংস্থার উদ্দেশ্যটা আসলে কি?
+- সে উদ্দেশ্য বের করার জন্যই আমি কাজ করছি মিস্টার সিফাত। উরা যে রেডিও কমিউনিকেশন সিস্টেম ব্যবহার করে তার সাথে সাধারণত একটি রেকর্ডার থাকে। সেই রেকর্ডারটি খুজে বের করতে পারলে তাদের আগের বলা কথাগুলোও শুনা যেত। 
+- সেই রেকর্ডার কোথায় খুঁজব?
+- সাধারণত অন্য ঘরে রাখা হয় যেন যে কেউ খুঁজে না পায়। 
+তারা সেই রুমের বাম পাশে একটি দরজা দেখতে পায়। দ্রুত কিন্ত্ সাবধানে গোলজার এবং তার পেছনে সিফাত দরজাটি খুলে অন্য একটু ঘরে প্রবেশ করে দরজা লাগিয়ে দেয়। ঘরটি অন্ধকার। গোলজার তার টর্চ জ্বালায়। চারপাশে বিভিন্ন খালি কাগজের বক্স পরে আছে। ঘড়ের এক কোণায় দেয়ালের সাথে লাগানো একটি মই দেখতে পায়। সে মইটির কাছে যায়। মইটির কয়েকটি ধাপ উঠে উপরের ছাদটি পরিক্ষা করে সিফাত। একসময় ছাদে ধাক্কা দিলে সেই জায়গা দিয়ে একটি চারকোনা বোর্ড যেটি ছাদের রঙে রঙ করা ভেতরে ঢুকে যায়। গোলাজার দৌড়ে তার কাছে আসে।
+- আগে আমাকে ঢুকতে দিন
+- ঠিক আছে 
+নিলয় নিচে নামলে গোলজার মই বেয়ে সেই জায়গা দিয়ে মাথা ঢুকালে পুরো একটি ঘর দেখতে পায়। গোলজার উপরে উঠে সিফাতকে উঠতে বলে। পুরু ঘড়টিতে বৈদ্যুতিক জেনারেটর সহ আরো অনেক যন্ত্রপাতি দিয়ে ভরা। 
+- রেকর্ডার থেকে থাকলে এখানেই থাকবে। আমাদের খুঁজে বের করতে হবে। 
+তারা অনেক খুঁজে কিন্তু কিছুই পায় না। 
+অবশেষে তারা মই বেয়ে নিচে নেমে আসে। সেখানে ঘরের একপাশে নিচে একটি ডেস্কটপ কম্পিউটার লক্ষ্য করে গোলজার। সে তার পকেট থেকে একটি ছোট ছুড়ি বের করে কম্পিউটারটির সিপিউ এর স্ক্রুগুলো খোলে ভেতর থেকে হার্ড ডিস্কটি নিয়ে নেয়।  
+- এই হার্ডডিস্ক থেকে তথ্য পাওয়া যেতে পারে।
+- ভালো করেছেন সাথে নিয়ে। অর্নব কি এই বাড়িতে আছে?
+- আমার ধারনা মতে অর্নব এখানে নেই। যদি অর্নব থাকতো তবে তাকে সামনের ঘরেই বেধে রাখা হতো। তবে আমাদের পুরো বাড়িটি ভালো করে খোঁজে দেখতে হবে। 
+তারা সেই ঘর থেকে বেড়িয়ে পুরো খামারটি সাবধানে খোঁজে দেখে কিন্তু অর্নবকে খোঁজে পাই নি। একটা সময় তারা খামারের মাঠের একটি গাছের নিচে দাড়ালে পেছন থেকে একটি কুকুর ডেকে উঠে। তারা তাকিয়ে দেখে একটি রাশিয়ান হাউন্ড তাদের দিকে তেড়ে আসছে। 
+- কোনোভাবেই আতংকিত হয়ে দৌড় দিবেন না সিফাত। এই ব্রিডের কুকুরের সাথে দৌড়ে পারবেন না। কুকুরের চোখের দিকে তাকাবেন না। পাশাপাশি থাকার চেষ্টা করতে হবে৷ নির্বিকার থাকবেন যত সম্ভব
+- আমি চেষ্টা করছি।
+
+কুকুরটি তাদের থেকে ৩/৪ হাত দূরে এসে অনেক জোরে ডাকতে থাকে। তারা অন্যদিকে তাকিয়ে আড় চোখে কুকুরটির দিকে লক্ষ্য রাখছে।  ধীরে ধীরে গোলজার পাশ কাটতে থাকে।  একটা সময় কুকুরটি আগ্রহ হারায় এবং অন্যদিকে মনোযোগ দেয়। এমন সময় তারা লক্ষ্য করে টর্চ হাতে ঘরের ভেতর থেকে ৩/৪ জন লোক তাদের দিকে দৌড়ে আসছে। 
+
+- সিফাত, আমরা যেদিক দিয়ে ঢুকেছিলাম সেইদিকে দৌড়ান।
+
+তারা প্রাণপনে দৌড়ে খামারের প্রাচিরটির কাছে আসে। 
+লোকগুলো দৌড়ে তাদের দিকেই আসছে সাথে কুকুরটি আবার উৎসাহ ফিরে পেয়ে তেড়ে আসছে। 
+- সিফাত, শুধু মাত্র হাতের পেশি শক্তি ব্যবহার করে দড়িটি বেয়ে উঠুন। 
+তারা খামারের ভেতরে ঢুকার সময় যে দড়িটি গাছে বেধেছিল সেটি বেয়ে উঠতে শুরু করে সিফাত।  তার অনেক কষ্ট হচ্ছে, তার পেশিশক্তি কম। গোলজার দড়ির নিচের অংশ বেয়ে সিফাতের পেছন পেছন উঠতে থাকে। একটা সময় তারা গাছে উঠে পরে তখনি লোকগুলো নিচে এসে পরে। গোলজার দ্রুত দড়িটি গুটিয়ে ফেলে প্রাচিরের অপর দিকে ফেলে। প্রথমে সিফাত এবং পরে গোলজাএ নেমে যায়। 
+
+- লোকগুলো গেইট দিয়ে আসতে সময় লাগবে। এই সুযোগে আমাদের বাইকের দিকে দৌড়াতে হবে। তারা প্রাণপনে তাদের বাইকের দিকে দৌড়াতে শুরু করে। গোলজার পেছনে তাকিয়ে দেখে সেই সবুজ রঙের গাড়িটি খামারের গেইট দিয়ে বের হচ্ছে। তারা বাইকের কাছে পৌছালে গোলজার দ্রুত বাইকে স্টার্ট করে সেখান থেকে বড় রাস্তায় চলে আসে। লুকিং গ্লাসে দেখতে পায় পেছনে সবুজ গাড়িটি তাদে পিছু নিয়েছে। 
+গোলজার তার সামনের গাড়িগুলো অতিক্রম করে নিজেদের আড়াল করার চেষ্টা করছে। একটা সময় এক গলির ভেতর দিয়ে ঢুকে গেলে গাড়িটি তাদের হারিয়ে ফেলে। গোলজার সিফাতকে নিয়ে তার বাসায় ফিরে আসে। 
+____ 
+
+    </p>
+
+</section>
+ 
+
+ 
+ <!-- footer -->
+
+ <footer class="footer footer-center p-10 bg-slate-500 text-black">
+    <aside>
+      <img src="../../images/logo.png" alt="logo" height="150" width="150">
+      <p class="font-bold text-3xl">
+        Israq's Library
+      </p> 
+      <p class="text-sm font-semibold max-w-md">Hi, I am SM Ragib Israq Daiyan. <br> The objective of this website is to make the books easily accessible to my beloved people.  When it comes to entertainment, <br>reading book is the best. </p>
+      <p class="mt-2">Copyright © 2024 - All right reserved</p>
+    </aside> 
+    <nav>
+      <div class="grid grid-flow-col gap-4 text-3xl">
+        <a href="https://www.facebook.com/shah.daiyan" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@durnibarpathshala" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://wa.me/+8801612073102" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </nav>
+  </footer>
+</body>
+</html>
