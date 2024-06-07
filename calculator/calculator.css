@@ -1,0 +1,42 @@
+
+.base {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    margin-top: 15px;
+
+}
+.title {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+.container {
+    background-color: rgba(36, 27, 27, 0.742);
+    width: 280px;
+    padding: 20px;
+    border: 3px solid rgb(102, 95, 95);
+    box-shadow: 5px 5px 10px rgb(186, 171, 171) ;
+}
+
+#display { 
+    font-size: 30px;
+    margin: 15px;
+    width: 90%;
+}
+
+.btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.button {
+    height: 35px;
+    width: 35px;
+    margin: 10px;
+    background-color: rgb(222, 194, 141);
+    font-size: 15px;
+    font-weight: 600;
+}
