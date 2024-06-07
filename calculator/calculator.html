@@ -258,12 +258,14 @@
     <!--  claculator section starts from here -->
  
         <div class="h-[540px] flex justify-center items-center mt-4 bg-slate-200">
-            <div class="bg-[#241B1BBD] w-[350px] p-5 border-[#665F5F] border-4 shadow-lg shadow-[#BAABAB]">
+
+          <!-- calculator body -->
+            <div class="bg-[#241B1BBD] w-[350px] p-4 border-[#665F5F] border-4 shadow-lg shadow-[#BAABAB] rounded-lg">
                 <h3 class="text-xl font-bold text-white">Israq's Library</h3>
                 <!-- display starts here -->
-                <input type="text" class="text-4xl m-4 w-[90%] bg-slate-400" id="display" readonly>
+                <input type="text" class="text-4xl m-4 w-[90%] bg-slate-400" id="display" readonly> 
                 <!-- button container div -->
-                <div class="flex flex-wrap justify-center">
+                <div class="flex flex-wrap justify-center my-2">
 
                     <button class="h-9 w-9 m-3 text-lg font-semibold bg-[#DEC28D]" onclick="currentDisplay = currentDisplay + `1`; document.querySelector('#display').value = currentDisplay;">1</button>
                     <button class="h-9 w-9 m-3 text-lg font-semibold bg-[#DEC28D]" onclick="currentDisplay = currentDisplay + `2`; document.querySelector('#display').value = currentDisplay;">2</button>
